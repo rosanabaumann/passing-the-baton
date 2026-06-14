@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passing the Baton — Rosana del Carmen Baumann</title>
+  <meta name="description" content="Designing Visible Care Coordination at Socio-Medical Transitions. A Bachelor graduation project by Rosana del Carmen Baumann." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#hero">Passing the Baton</a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#project"       data-i18n="nav_project">Project</a></li>
+        <li><a href="#system"        data-i18n="nav_system">System</a></li>
+        <li><a href="#process"       data-i18n="nav_process">Process</a></li>
+        <li><a href="#findings"      data-i18n="nav_findings">Findings</a></li>
+        <li><a href="#interventions" data-i18n="nav_interventions">Interventions</a></li>
+        <li><a href="#experience"    data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#about"         data-i18n="nav_about">About</a></li>
+      </ul>
+      <div class="nav__lang">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="nav__lang-sep">/</span>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <span class="nav__lang-sep">/</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       01 · HERO  (full-screen exhibition poster)
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <div class="hero__bubbles" aria-hidden="true">
+      <div class="hb hb--1"></div>
+      <div class="hb hb--2"></div>
+      <div class="hb hb--3"></div>
+    </div>
+
+    <!-- poster title top -->
+    <div class="hero__poster">
+      <p class="hero__eyebrow" data-i18n="hero_eyebrow">Bachelor Graduation Project · 2026</p>
+      <h1 class="hero__title">
+        <span class="hero__word" data-i18n="hero_title1">Passing</span>
+        <span class="hero__word hero__word--accent" data-i18n="hero_title2">the Baton</span>
+      </h1>
+    </div>
+
+    <!-- centrepiece: full-width relay race illustration -->
+    <div class="hero__race" aria-label="Two runners at the moment of passing the baton">
+      <svg class="race-svg" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+
+        <!-- track -->
+        <line x1="0" y1="252" x2="900" y2="252" stroke="#2B1E1B" stroke-width="1.5" stroke-dasharray="10,8" opacity="0.15"/>
+        <polygon points="893,247 906,252 893,257" fill="#2B1E1B" opacity="0.15"/>
+
+        <!-- motion lines behind A -->
+        <line x1="20"  y1="165" x2="110" y2="165" stroke="#C4705A" stroke-width="2"   stroke-linecap="round" opacity="0.35" class="motion-line"/>
+        <line x1="10"  y1="188" x2="108" y2="188" stroke="#C4705A" stroke-width="1.2" stroke-linecap="round" opacity="0.2"  class="motion-line"/>
+        <line x1="30"  y1="210" x2="112" y2="210" stroke="#C4705A" stroke-width="1"   stroke-linecap="round" opacity="0.15" class="motion-line"/>
+
+        <!-- ── FIGURE A: leaning hard forward, arm fully outstretched ── -->
+        <g class="runner runner--a">
+          <circle cx="185" cy="72"  r="26" fill="none" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <!-- torso pitched forward -->
+          <line x1="185" y1="98"  x2="208" y2="178" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <!-- arm back -->
+          <line x1="194" y1="133" x2="142" y2="108" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <!-- arm forward — holding baton out -->
+          <line x1="194" y1="133" x2="315" y2="160" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <!-- front leg driving forward -->
+          <line x1="208" y1="178" x2="250" y2="250" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <!-- back leg lifted behind -->
+          <line x1="208" y1="178" x2="162" y2="236" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="162" y1="236" x2="180" y2="255" stroke="#2B1E1B" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+
+        <!-- ── BATON — the visual protagonist ── -->
+        <g class="baton-rod">
+          <rect x="314" y="157" width="130" height="20" rx="10" fill="rgba(43,30,27,.1)" transform="translate(3,5)"/>
+          <rect x="314" y="153" width="130" height="20" rx="10" fill="#C4705A"/>
+          <rect x="322" y="157" width="46" height="6"  rx="3"  fill="rgba(255,255,255,.42)"/>
+          <circle cx="319" cy="163" r="10" fill="#A85840"/>
+          <circle cx="439" cy="163" r="10" fill="#A85840"/>
+        </g>
+
+        <!-- handover zone annotation -->
+        <ellipse cx="447" cy="185" rx="70" ry="48" fill="#6B2E2A" opacity="0.04"/>
+        <text x="447" y="116" text-anchor="middle"
+              font-family="Poppins, Helvetica Neue, sans-serif"
+              font-size="10" font-weight="700" letter-spacing="0.16em"
+              fill="#6B2E2A" opacity="0.5">THE HANDOVER</text>
+        <line x1="447" y1="120" x2="447" y2="138" stroke="#6B2E2A" stroke-width="1" stroke-dasharray="3,3" opacity="0.3"/>
+
+        <!-- ── FIGURE B: arm stretched back, body already moving forward ── -->
+        <g class="runner runner--b">
+          <circle cx="700" cy="72"  r="26" fill="none" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="700" y1="98"  x2="680" y2="178" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <!-- arm reaching back for baton -->
+          <line x1="692" y1="133" x2="444" y2="158" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <!-- arm driving forward -->
+          <line x1="692" y1="133" x2="752" y2="105" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="680" y1="178" x2="725" y2="250" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="680" y1="178" x2="640" y2="236" stroke="#2B1E1B" stroke-width="2.8" stroke-linecap="round"/>
+          <line x1="640" y1="236" x2="658" y2="255" stroke="#2B1E1B" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+
+        <!-- motion lines ahead of B -->
+        <line x1="762" y1="165" x2="868" y2="165" stroke="#2B1E1B" stroke-width="1.5" stroke-linecap="round" opacity="0.12" class="motion-line"/>
+        <line x1="758" y1="188" x2="860" y2="188" stroke="#2B1E1B" stroke-width="1"   stroke-linecap="round" opacity="0.08" class="motion-line"/>
+
+        <!-- actor labels -->
+        <text x="185" y="284" text-anchor="middle" font-family="Helvetica Neue, sans-serif" font-size="12" fill="#5C4033" opacity="0.65" data-i18n-svg="actor_a">Care Actor A</text>
+        <text x="700" y="284" text-anchor="middle" font-family="Helvetica Neue, sans-serif" font-size="12" fill="#5C4033" opacity="0.65" data-i18n-svg="actor_b">Care Actor B</text>
+
+      </svg>
+    </div>
+
+    <!-- subtitle + CTA pinned to bottom -->
+    <div class="hero__bottom">
+      <p class="hero__sub" data-i18n="hero_sub">Designing Visible Care Coordination at Socio-Medical Transitions</p>
+      <div class="hero__btns">
+        <a href="#project"       class="btn btn--primary" data-i18n="hero_btn1">Explore the Project</a>
+        <a href="#interventions" class="btn btn--ghost"   data-i18n="hero_btn2">View the Interventions</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT (moved to top)
+  ═══════════════════════════════════════════ -->
+  <section class="about about--top" id="about">
+    <div class="container">
+      <div class="about__inner fade-in">
+        <div class="about__text">
+          <h2 data-i18n="about_title">About the Project</h2>
+          <p data-i18n="about_desc">This project was developed as a Bachelor graduation project in Design Management at Lucerne University of Applied Sciences and Arts, in collaboration with the Swiss Center for Design and Health.</p>
+          <p data-i18n="about_context">The research was conducted in the Emmental and Oberaargau region of Switzerland, in partnership with SOMEKO, GNE, GNO, COALA, and SCDH.</p>
+        </div>
+        <div class="about__author">
+          <div class="about__name">Rosana del Carmen Baumann</div>
+          <div class="about__role" data-i18n="about_role">Bachelor of Arts · Product and Industrial Design · Specialization in Design Management</div>
+          <div class="about__school" data-i18n="about_school">Lucerne University of Applied Sciences and Arts, 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       02 · IMAGINE
+  ═══════════════════════════════════════════ -->
+  <section class="imagine" id="project">
+    <div class="container">
+      <div class="imagine__stories">
+        <div class="imagine__story fade-in">
+          <div class="imagine__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="13" r="7" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><path d="M8 35c0-7 5-11 12-11s12 4 12 11" stroke="#6B2E2A" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <p data-i18n="imagine_s1">A doctor follows up on medication.</p>
+        </div>
+        <div class="imagine__story fade-in">
+          <div class="imagine__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><rect x="8" y="18" width="24" height="16" rx="2" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><path d="M14 18v-4a6 6 0 0112 0v4" stroke="#6B2E2A" stroke-width="1.8" fill="none"/></svg>
+          </div>
+          <p data-i18n="imagine_s2">A Spitex nurse coordinates transport.</p>
+        </div>
+        <div class="imagine__story fade-in">
+          <div class="imagine__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><circle cx="14" cy="13" r="6" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><circle cx="27" cy="13" r="6" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><path d="M4 35c0-6 4-10 10-10m16 10c0-6-4-10-10-10" stroke="#6B2E2A" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <p data-i18n="imagine_s3">A relative clarifies unresolved insurance questions.</p>
+        </div>
+      </div>
+      <div class="imagine__statement fade-in">
+        <p data-i18n="imagine_intro">The Swiss healthcare system works.</p>
+        <p class="imagine__emphasis" data-i18n="imagine_emphasis">But often because people coordinate beyond their formal roles.</p>
+        <p class="imagine__sub" data-i18n="imagine_sub">Each contributes to the same care situation, but still works from a different part of the system. This work is called <em>invisible care coordination</em>.</p>
+      </div>
+      <!-- Floating task cloud -->
+      <div class="task-cloud fade-in" aria-label="Invisible coordination tasks">
+        <span class="task-bubble" style="--d:0s;   --x:0%;   --y:0%"   data-i18n="task1">organise transport</span>
+        <span class="task-bubble" style="--d:.4s;  --x:60%;  --y:10%"  data-i18n="task2">call relative</span>
+        <span class="task-bubble" style="--d:.8s;  --x:20%;  --y:50%"  data-i18n="task3">clarify medication</span>
+        <span class="task-bubble" style="--d:1.2s; --x:70%;  --y:55%"  data-i18n="task4">find nursing home</span>
+        <span class="task-bubble" style="--d:1.6s; --x:5%;   --y:80%"  data-i18n="task5">check insurance</span>
+        <span class="task-bubble" style="--d:2s;   --x:45%;  --y:80%"  data-i18n="task6">update GP</span>
+        <span class="task-bubble" style="--d:2.4s; --x:78%;  --y:82%"  data-i18n="task7">contact Spitex</span>
+        <span class="task-bubble" style="--d:2.8s; --x:35%;  --y:25%"  data-i18n="task8">repeat patient history</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       03 · SYSTEM CHALLENGE
+  ═══════════════════════════════════════════ -->
+  <section class="system-section" id="system">
+    <div class="container">
+      <h2 class="section-title fade-in" data-i18n="system_title">The System Challenge</h2>
+      <p class="section-lead fade-in" data-i18n="system_lead">Switzerland's healthcare system is highly capable, but fragmented. Care increasingly spans medical treatment, nursing support, social work, relatives, insurers, home care and institutions. When these actors work in parallel without a shared overview, care becomes vulnerable.</p>
+      <div class="sys-map fade-in" id="sysMap">
+        <div class="sys-ring sys-ring--macro" data-level="macro">
+          <div class="sys-ring__tag">Macro</div>
+          <div class="sys-ring__tip" data-i18n="sys_macro_tip">
+            <strong>Macro</strong> — Health policy, financing, cantons, national strategies. The structural framework within which all care is organized.
+          </div>
+          <div class="sys-ring sys-ring--meso" data-level="meso">
+            <div class="sys-ring__tag">Meso</div>
+            <div class="sys-ring__tip" data-i18n="sys_meso_tip">
+              <strong>Meso</strong> — Health networks, hospitals, institutions, organisations. Where coordination structures exist — or don't.
+            </div>
+            <div class="sys-ring sys-ring--micro" data-level="micro">
+              <div class="sys-ring__tag">Micro</div>
+              <div class="sys-ring__tip" data-i18n="sys_micro_tip">
+                <strong>Micro</strong> — Patients, relatives, GPs, Spitex, coordinators, everyday care practice. Where invisible coordination actually happens.
+              </div>
+              <div class="sys-ring__center">
+                <span aria-hidden="true">♡</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sys-map__legend">
+          <div class="sys-legend-item sys-legend-item--macro" data-i18n="sys_legend_macro">Macro: Policy &amp; Structure</div>
+          <div class="sys-legend-item sys-legend-item--meso"  data-i18n="sys_legend_meso">Meso: Networks &amp; Institutions</div>
+          <div class="sys-legend-item sys-legend-item--micro" data-i18n="sys_legend_micro">Micro: Everyday Care</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       04 · DESIGN PROCESS
+  ═══════════════════════════════════════════ -->
+  <section class="process" id="process">
+    <div class="container">
+      <h2 class="section-title fade-in" data-i18n="process_title">Design Process</h2>
+      <p class="section-lead fade-in" data-i18n="process_lead">Five phases from first observation to tested intervention. Hover over each phase to explore.</p>
+
+      <!-- Interactive process visualization matching thesis illustration style -->
+      <div class="process-vis fade-in">
+
+        <!-- Dashed connecting line -->
+        <div class="process-line" aria-hidden="true"></div>
+
+        <!-- Phase 1: Seeing -->
+        <div class="pv-phase" data-phase="1" tabindex="0">
+          <div class="pv-blob pv-blob--1" aria-hidden="true"></div>
+          <div class="pv-illustration pv-ill--seeing" aria-hidden="true">
+            <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+              <!-- figure -->
+              <circle cx="38" cy="22" r="11" fill="none" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="33" x2="38" y2="65" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="48" x2="22" y2="58" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <!-- arm holding magnifying glass -->
+              <line x1="38" y1="48" x2="62" y2="62" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="65" x2="28" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="65" x2="48" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <!-- magnifying glass -->
+              <circle class="pv-anim-spin" cx="70" cy="68" r="14" fill="none" stroke="#2B1E1B" stroke-width="2"/>
+              <line x1="80" y1="78" x2="88" y2="88" stroke="#2B1E1B" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- floating dots/nodes -->
+              <circle class="pv-anim-float1" cx="78" cy="30" r="4" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <circle class="pv-anim-float2" cx="88" cy="45" r="3" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <circle class="pv-anim-float3" cx="72" cy="48" r="2.5" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <circle class="pv-anim-float1" cx="60" cy="35" r="2" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <line x1="78" y1="30" x2="88" y2="45" stroke="#2B1E1B" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+              <line x1="88" y1="45" x2="72" y2="48" stroke="#2B1E1B" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+              <line x1="72" y1="48" x2="60" y2="35" stroke="#2B1E1B" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="pv-label" style="color:#5C7A4A" data-i18n="p1_name">Seeing</div>
+          <div class="pv-tooltip">
+            <strong data-i18n="p1_name">Seeing</strong>
+            <p data-i18n="p1_desc">Mapping the landscape of integrated care. Understanding the system before entering it.</p>
+            <div class="pv-tags">
+              <span data-i18n="p1_m1">Literature Review</span>
+              <span data-i18n="p1_m2">System Mapping</span>
+              <span data-i18n="p1_m3">Swiss Health Strategy</span>
+            </div>
+            <p class="pv-outcome" data-i18n="p1_out">→ Contextual understanding of fragmented care.</p>
+          </div>
+        </div>
+
+        <!-- Phase 2: Exploring -->
+        <div class="pv-phase" data-phase="2" tabindex="0">
+          <div class="pv-blob pv-blob--2" aria-hidden="true"></div>
+          <div class="pv-illustration pv-ill--exploring" aria-hidden="true">
+            <svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+              <!-- central figure -->
+              <circle cx="55" cy="22" r="11" fill="none" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="55" y1="33" x2="55" y2="65" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="55" y1="48" x2="35" y2="55" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="55" y1="48" x2="75" y2="55" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="55" y1="65" x2="45" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="55" y1="65" x2="65" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <!-- small figure left -->
+              <circle cx="18" cy="35" r="8" fill="none" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="18" y1="43" x2="18" y2="62" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="18" y1="52" x2="10" y2="58" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="18" y1="52" x2="30" y2="55" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="18" y1="62" x2="12" y2="80" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="18" y1="62" x2="24" y2="80" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- small figure right -->
+              <circle cx="92" cy="35" r="8" fill="none" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="92" y1="43" x2="92" y2="62" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="92" y1="52" x2="80" y2="55" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="92" y1="52" x2="100" y2="58" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="92" y1="62" x2="86" y2="80" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="92" y1="62" x2="98" y2="80" stroke="#2B1E1B" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- speech bubbles -->
+              <rect class="pv-anim-float1" x="22" y="8" width="22" height="14" rx="7" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <circle cx="22" cy="22" r="2" fill="#2B1E1B" opacity="0.5"/>
+              <circle cx="24" cy="12" r="1.2" fill="#2B1E1B" opacity="0.6"/>
+              <circle cx="29" cy="12" r="1.2" fill="#2B1E1B" opacity="0.6"/>
+              <circle cx="34" cy="12" r="1.2" fill="#2B1E1B" opacity="0.6"/>
+              <rect class="pv-anim-float2" x="68" y="8" width="22" height="14" rx="7" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <circle cx="88" cy="22" r="2" fill="#2B1E1B" opacity="0.5"/>
+              <text x="76" y="19" font-size="9" fill="#2B1E1B" opacity="0.8">?</text>
+            </svg>
+          </div>
+          <div class="pv-label" style="color:#8B4A2A" data-i18n="p2_name">Exploring</div>
+          <div class="pv-tooltip">
+            <strong data-i18n="p2_name">Exploring</strong>
+            <p data-i18n="p2_desc">Going into the field. Listening to healthcare professionals, observing coordination in practice.</p>
+            <div class="pv-tags">
+              <span data-i18n="p2_m1">Expert Interviews</span>
+              <span data-i18n="p2_m2">Stakeholder Interviews</span>
+              <span data-i18n="p2_m3">Observations</span>
+            </div>
+            <p class="pv-outcome" data-i18n="p2_out">→ Rich picture of how coordination works and where it breaks down.</p>
+          </div>
+        </div>
+
+        <!-- Phase 3: Rethinking -->
+        <div class="pv-phase" data-phase="3" tabindex="0">
+          <div class="pv-blob pv-blob--3" aria-hidden="true"></div>
+          <div class="pv-illustration pv-ill--rethinking" aria-hidden="true">
+            <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+              <!-- figure -->
+              <circle cx="28" cy="22" r="11" fill="none" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="33" x2="28" y2="65" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="48" x2="14" y2="58" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="48" x2="48" y2="40" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="65" x2="18" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="65" x2="38" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <!-- whiteboard/frame -->
+              <rect x="52" y="18" width="40" height="48" rx="3" fill="none" stroke="#2B1E1B" stroke-width="2"/>
+              <!-- nodes on board -->
+              <circle class="pv-anim-float1" cx="65" cy="30" r="4" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <circle class="pv-anim-float2" cx="80" cy="38" r="4" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <circle class="pv-anim-float3" cx="68" cy="52" r="4" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <line x1="65" y1="30" x2="80" y2="38" stroke="#2B1E1B" stroke-width="1.2"/>
+              <line x1="80" y1="38" x2="68" y2="52" stroke="#2B1E1B" stroke-width="1.2"/>
+              <line x1="65" y1="30" x2="68" y2="52" stroke="#2B1E1B" stroke-width="1.2" stroke-dasharray="3,2"/>
+              <!-- lightbulb above -->
+              <circle class="pv-anim-glow" cx="72" cy="6" r="6" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <line x1="69" y1="12" x2="75" y2="12" stroke="#2B1E1B" stroke-width="1.5"/>
+              <line x1="72" y1="12" x2="72" y2="16" stroke="#2B1E1B" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="pv-label" style="color:#B07020" data-i18n="p3_name">Rethinking</div>
+          <div class="pv-tooltip">
+            <strong data-i18n="p3_name">Rethinking</strong>
+            <p data-i18n="p3_desc">Triangulating findings, mapping the system, reframing the challenge from structural to relational.</p>
+            <div class="pv-tags">
+              <span data-i18n="p3_m1">Triangulation</span>
+              <span data-i18n="p3_m2">System Mapping</span>
+              <span data-i18n="p3_m3">Reframing</span>
+            </div>
+            <p class="pv-outcome" data-i18n="p3_out">→ Area of opportunity: coordination as relational practice.</p>
+          </div>
+        </div>
+
+        <!-- Phase 4: Transforming -->
+        <div class="pv-phase" data-phase="4" tabindex="0">
+          <div class="pv-blob pv-blob--4" aria-hidden="true"></div>
+          <div class="pv-illustration pv-ill--transforming" aria-hidden="true">
+            <svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+              <!-- Figure A running, passing -->
+              <circle cx="30" cy="20" r="11" fill="none" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="30" y1="31" x2="38" y2="62" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="32" y1="46" x2="14" y2="40" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="32" y1="46" x2="56" y2="54" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="62" x2="55" y2="85" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="62" x2="22" y2="82" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <!-- baton -->
+              <rect class="pv-anim-baton" x="56" y="50" width="22" height="7" rx="3.5" fill="#C4705A"/>
+              <!-- Figure B reaching back -->
+              <circle cx="88" cy="20" r="11" fill="none" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="88" y1="31" x2="80" y2="62" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="86" y1="46" x2="110" y2="40" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="86" y1="46" x2="62" y2="52" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="80" y1="62" x2="95" y2="85" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="80" y1="62" x2="65" y2="80" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <!-- motion sparks -->
+              <line class="pv-anim-spark" x1="50" y1="62" x2="56" y2="55" stroke="#C4705A" stroke-width="1.5" stroke-linecap="round"/>
+              <line class="pv-anim-spark" x1="46" y1="58" x2="52" y2="52" stroke="#C4705A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="pv-label" style="color:#9B2020" data-i18n="p4_name">Transforming</div>
+          <div class="pv-tooltip">
+            <strong data-i18n="p4_name">Transforming</strong>
+            <p data-i18n="p4_desc">Developing two complementary design interventions through co-design moments and iterative prototyping.</p>
+            <div class="pv-tags">
+              <span data-i18n="p4_m1">Design Strategy</span>
+              <span data-i18n="p4_m2">Co-Design</span>
+              <span data-i18n="p4_m3">Prototyping</span>
+            </div>
+            <p class="pv-outcome" data-i18n="p4_out">→ Advocacy Paper and Socio-Medical Handover Baton.</p>
+          </div>
+        </div>
+
+        <!-- Phase 5: Evaluating -->
+        <div class="pv-phase" data-phase="5" tabindex="0">
+          <div class="pv-blob pv-blob--5" aria-hidden="true"></div>
+          <div class="pv-illustration pv-ill--evaluating" aria-hidden="true">
+            <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+              <!-- figure holding clipboard -->
+              <circle cx="40" cy="22" r="11" fill="none" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="40" y1="33" x2="40" y2="65" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="40" y1="48" x2="22" y2="55" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="40" y1="48" x2="62" y2="44" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="40" y1="65" x2="30" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <line x1="40" y1="65" x2="50" y2="90" stroke="#2B1E1B" stroke-width="2" stroke-linecap="round"/>
+              <!-- clipboard -->
+              <rect x="60" y="30" width="28" height="36" rx="2" fill="none" stroke="#2B1E1B" stroke-width="1.8"/>
+              <rect x="68" y="26" width="12" height="6" rx="3" fill="none" stroke="#2B1E1B" stroke-width="1.5"/>
+              <!-- checkmarks -->
+              <line class="pv-anim-check" x1="66" y1="41" x2="69" y2="45" stroke="#5C7A4A" stroke-width="2" stroke-linecap="round"/>
+              <line class="pv-anim-check" x1="69" y1="45" x2="75" y2="37" stroke="#5C7A4A" stroke-width="2" stroke-linecap="round"/>
+              <line class="pv-anim-check" x1="66" y1="50" x2="69" y2="54" stroke="#5C7A4A" stroke-width="2" stroke-linecap="round"/>
+              <line class="pv-anim-check" x1="69" y1="54" x2="75" y2="46" stroke="#5C7A4A" stroke-width="2" stroke-linecap="round"/>
+              <!-- partial check (still open) -->
+              <line x1="66" y1="59" x2="80" y2="59" stroke="#2B1E1B" stroke-width="1.2" stroke-dasharray="2,2" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="pv-label" style="color:#6B2E2A" data-i18n="p5_name">Evaluating</div>
+          <div class="pv-tooltip pv-tooltip--left">
+            <strong data-i18n="p5_name">Evaluating</strong>
+            <p data-i18n="p5_desc">Testing interventions with healthcare professionals, gathering feedback, thinking about implementation.</p>
+            <div class="pv-tags">
+              <span data-i18n="p5_m1">Feedback Loops</span>
+              <span data-i18n="p5_m2">Testing</span>
+              <span data-i18n="p5_m3">Implementation Thinking</span>
+            </div>
+            <p class="pv-outcome" data-i18n="p5_out">→ Grounded understanding of what the interventions can and cannot do.</p>
+          </div>
+        </div>
+
+      </div><!-- /process-vis -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       05 · KEY FINDINGS
+  ═══════════════════════════════════════════ -->
+  <section class="findings" id="findings">
+    <div class="container">
+      <h2 class="section-title fade-in" data-i18n="findings_title">Key Findings</h2>
+      <div class="findings-grid">
+        <div class="finding-card fade-in"><span class="finding-card__n">01</span><p data-i18n="f1">Coordination already happens — but often invisibly, carried by motivated individuals rather than formal structures.</p></div>
+        <div class="finding-card fade-in"><span class="finding-card__n">02</span><p data-i18n="f2">It is carried without formal mandate, protected time, or recognition.</p></div>
+        <div class="finding-card fade-in"><span class="finding-card__n">03</span><p data-i18n="f3">Transitions are the most vulnerable moments. No single actor holds the full picture.</p></div>
+        <div class="finding-card fade-in"><span class="finding-card__n">04</span><p data-i18n="f4">Information fragments across systems and institutions. Responsibility for the handover often remains unclear.</p></div>
+        <div class="finding-card fade-in"><span class="finding-card__n">05</span><p data-i18n="f5">Coordination depends on trust, communication, shared knowledge and mutual respect.</p></div>
+        <div class="finding-card fade-in"><span class="finding-card__n">06</span><p data-i18n="f6">SOMEKO needs visibility, shared language, clear entry points and recognition to become embedded.</p></div>
+        <div class="finding-card fade-in"><span class="finding-card__n">07</span><p data-i18n="f7">The baton drops not because people don't care — but because the handover itself was never properly designed.</p></div>
+        <div class="finding-card fade-in"><span class="finding-card__n">08</span><p data-i18n="f8">Making coordination visible is the first step toward making it shareable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       06 · ICEBERG
+  ═══════════════════════════════════════════ -->
+  <section class="iceberg-section" id="iceberg">
+    <div class="container">
+      <h2 class="section-title fade-in" data-i18n="ice_title">The Iceberg of Care Coordination</h2>
+      <p class="section-lead fade-in" data-i18n="ice_lead">Hover over each item to learn more. The surface shows what is formally recognised. Below the waterline lives the work that keeps care together — invisible, unprotected, and unacknowledged.</p>
+      <div class="iceberg fade-in" role="img" aria-label="Interactive iceberg diagram of visible and invisible care coordination">
+
+        <!-- ABOVE WATER -->
+        <div class="ice-above">
+          <p class="ice-zone-label" data-i18n="ice_above_label">What is visible</p>
+          <div class="ice-items ice-items--above">
+            <div class="ice-item" tabindex="0">
+              <span data-i18n="ice_a1">Official care meetings</span>
+              <div class="ice-tooltip" data-i18n="ice_a1_tip">Formal meetings between professionals — documented, scheduled, and recognized as part of the care process.</div>
+            </div>
+            <div class="ice-item" tabindex="0">
+              <span data-i18n="ice_a2">Formal referrals</span>
+              <div class="ice-tooltip" data-i18n="ice_a2_tip">Written referrals between GPs, specialists, and institutions that follow official pathways.</div>
+            </div>
+            <div class="ice-item" tabindex="0">
+              <span data-i18n="ice_a3">Documented handovers</span>
+              <div class="ice-tooltip" data-i18n="ice_a3_tip">Transfer letters, discharge reports, and formal transition documents.</div>
+            </div>
+            <div class="ice-item" tabindex="0">
+              <span data-i18n="ice_a4">Assigned coordination roles</span>
+              <div class="ice-tooltip" data-i18n="ice_a4_tip">Officially designated coordinators with a formal mandate — rare, but when present, highly effective.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WATERLINE -->
+        <div class="ice-waterline" aria-hidden="true">
+          <svg viewBox="0 0 900 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,25 Q112,5 225,25 Q337,45 450,25 Q562,5 675,25 Q787,45 900,25 L900,50 L0,50 Z" fill="#C8D9E4" opacity="0.35"/>
+            <path d="M0,25 Q112,5 225,25 Q337,45 450,25 Q562,5 675,25 Q787,45 900,25" fill="none" stroke="#6B2E2A" stroke-width="1.5" stroke-dasharray="6,4"/>
+          </svg>
+          <span class="ice-waterline__label" data-i18n="ice_waterline">waterline</span>
+        </div>
+
+        <!-- BELOW WATER -->
+        <div class="ice-below">
+          <p class="ice-zone-label ice-zone-label--below" data-i18n="ice_below_label">What stays invisible</p>
+          <div class="ice-items ice-items--below">
+            <div class="ice-item ice-item--below" tabindex="0">
+              <span data-i18n="ice_b1">Informal phone calls between colleagues</span>
+              <div class="ice-tooltip ice-tooltip--above" data-i18n="ice_b1_tip">Personal networks of trust that move information between systems — fast, but fragile and undocumented.</div>
+            </div>
+            <div class="ice-item ice-item--below" tabindex="0">
+              <span data-i18n="ice_b2">Personal contacts and workarounds</span>
+              <div class="ice-tooltip ice-tooltip--above" data-i18n="ice_b2_tip">Knowing the right person to call, bending processes to make things work — invisible labour that fills structural gaps.</div>
+            </div>
+            <div class="ice-item ice-item--below" tabindex="0">
+              <span data-i18n="ice_b3">Repeated patient histories</span>
+              <div class="ice-tooltip ice-tooltip--above" data-i18n="ice_b3_tip">Patients and families who tell the same story again and again to each new professional — a sign that information does not travel.</div>
+            </div>
+            <div class="ice-item ice-item--below" tabindex="0">
+              <span data-i18n="ice_b4">Coordination beyond formal role</span>
+              <div class="ice-tooltip ice-tooltip--above" data-i18n="ice_b4_tip">Professionals who coordinate more than their job description requires — motivated by care, not mandate.</div>
+            </div>
+            <div class="ice-item ice-item--below" tabindex="0">
+              <span data-i18n="ice_b5">Emotional labour of keeping track</span>
+              <div class="ice-tooltip ice-tooltip--above" data-i18n="ice_b5_tip">The cognitive and emotional weight of holding together a care situation no system formally owns.</div>
+            </div>
+            <div class="ice-item ice-item--below" tabindex="0">
+              <span data-i18n="ice_b6">Knowledge held in one person's head</span>
+              <div class="ice-tooltip ice-tooltip--above" data-i18n="ice_b6_tip">Critical information about a patient that exists only in the memory of one professional — and disappears when they are absent.</div>
+            </div>
+            <div class="ice-item ice-item--below" tabindex="0">
+              <span data-i18n="ice_b7">Gaps in responsibility at transitions</span>
+              <div class="ice-tooltip ice-tooltip--above" data-i18n="ice_b7_tip">The moment between discharge and intake where no one formally holds the picture — where the baton drops.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       07 · REFRAMING
+  ═══════════════════════════════════════════ -->
+  <section class="reframing" id="reframing">
+    <div class="container">
+      <div class="reframing__split fade-in">
+        <div class="reframing__col reframing__col--before">
+          <span class="reframing__tag" data-i18n="rf_before_tag">Before</span>
+          <p data-i18n="rf_before">Coordination as an administrative or structural problem.</p>
+        </div>
+        <div class="reframing__arrow" aria-hidden="true">→</div>
+        <div class="reframing__col reframing__col--after">
+          <span class="reframing__tag reframing__tag--after" data-i18n="rf_after_tag">After</span>
+          <p data-i18n="rf_after">Coordination as relational care work.</p>
+        </div>
+      </div>
+      <div class="reframing__statement fade-in">
+        <p class="reframing__pre" data-i18n="rf_pre">Coordination is not an extra service added onto care.</p>
+        <h2 class="reframing__headline" data-i18n="rf_headline">Coordination is Care.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       08 · INTERVENTIONS
+  ═══════════════════════════════════════════ -->
+  <section class="interventions" id="interventions">
+    <div class="container">
+      <h2 class="section-title fade-in" data-i18n="int_title">The Interventions</h2>
+
+      <!-- Intervention 1 -->
+      <div class="intervention fade-in">
+        <div class="intervention__meta">
+          <span class="intervention__label" data-i18n="int1_label">Intervention 01</span>
+        </div>
+        <div class="intervention__body">
+          <h3 class="intervention__title" data-i18n="int1_title">Coordination is Care</h3>
+          <p class="intervention__sub"  data-i18n="int1_sub">An Advocacy Paper</p>
+          <p data-i18n="int1_desc">The advocacy paper creates shared language for care coordination. It helps healthcare professionals, organisations and network partners understand why coordination work matters, where it currently remains invisible, and what conditions are needed to recognise it as part of care itself.</p>
+          <ul class="intervention__points">
+            <li data-i18n="int1_p1">Creates a shared vocabulary around coordination</li>
+            <li data-i18n="int1_p2">Makes invisible coordination work visible and discussable</li>
+            <li data-i18n="int1_p3">Addresses healthcare professionals, networks and institutions</li>
+            <li data-i18n="int1_p4">Supports SOMEKO's recognition and embedding in care pathways</li>
+          </ul>
+          <!-- Replace href with the actual PDF path once you add it to assets/documents/ -->
+          <a href="assets/documents/advocacy-paper.pdf" class="btn btn--primary" target="_blank" data-i18n="int1_btn">Download Advocacy Paper</a>
+        </div>
+      </div>
+
+      <!-- Intervention 2 + Interactive Baton Card -->
+      <div class="intervention fade-in">
+        <div class="intervention__meta">
+          <span class="intervention__label" data-i18n="int2_label">Intervention 02</span>
+        </div>
+        <div class="intervention__body">
+          <h3 class="intervention__title" data-i18n="int2_title">Socio-Medical Handover Baton</h3>
+          <p class="intervention__sub"  data-i18n="int2_sub">A Coordination Tool</p>
+          <p data-i18n="int2_desc">The baton is a structured, system-independent coordination tool that travels with the patient across transitions. It supports handovers between actors by making key socio-medical information visible, transferable and shared. It does not replace professional judgement — it creates a shared handover structure so that what one actor knows, the next one receives.</p>
+        </div>
+        <!-- Interactive Baton Card -->
+        <div class="baton-card fade-in" id="batonCard" aria-label="Interactive baton card">
+          <div class="baton-card__top">
+            <span class="baton-card__title" data-i18n="baton_card_title">Socio-Medical Handover Baton</span>
+            <div class="baton-card__nav" aria-label="Navigate baton fields">
+              <button id="batonPrev" aria-label="Previous field">←</button>
+              <span id="batonCounter" aria-live="polite">1 / 8</span>
+              <button id="batonNext" aria-label="Next field">→</button>
+            </div>
+          </div>
+          <div class="baton-card__fields" id="batonFields">
+            <div class="baton-field active"><div class="baton-field__label" data-i18n="bf1_l">Patient Situation</div><div class="baton-field__desc" data-i18n="bf1_d">Current health status, primary diagnosis, and immediate needs.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf2_l">Social Context</div><div class="baton-field__desc" data-i18n="bf2_d">Living situation, family support, social isolation, language barriers.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf3_l">Current Support System</div><div class="baton-field__desc" data-i18n="bf3_d">Who is already involved — formally and informally.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf4_l">Open Coordination Tasks</div><div class="baton-field__desc" data-i18n="bf4_d">What still needs to happen — and who is responsible.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf5_l">Involved Actors</div><div class="baton-field__desc" data-i18n="bf5_d">All professionals and institutions currently contributing to this care situation.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf6_l">Urgent Risks</div><div class="baton-field__desc" data-i18n="bf6_d">Critical flags that the next actor must know immediately.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf7_l">Next Steps</div><div class="baton-field__desc" data-i18n="bf7_d">Planned actions, upcoming appointments, pending decisions.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf8_l">Responsible Contact</div><div class="baton-field__desc" data-i18n="bf8_d">Who holds the baton now — and who to reach for questions.</div></div>
+          </div>
+          <div class="baton-card__dots" id="batonDots" aria-hidden="true">
+            <span class="bc-dot active"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
+            <span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       09 · EXPERIENCE IT
+  ═══════════════════════════════════════════ -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <h2 class="section-title fade-in" data-i18n="exp_title">Experience It Yourself</h2>
+      <p class="section-lead fade-in" data-i18n="exp_lead">Each marble is one invisible coordination task. Move the patient through the journey and see what happens to the information along the way.</p>
+
+      <div class="journey fade-in" id="journey">
+        <div class="journey__mode-toggle">
+          <button class="mode-btn active" id="modeNoBaton" data-i18n="mode_no_baton">Without Baton</button>
+          <button class="mode-btn" id="modeWithBaton" data-i18n="mode_with_baton">With Baton</button>
+        </div>
+
+        <div class="journey__track">
+          <div class="journey__step active" data-step="0">
+            <div class="journey__step-node"></div>
+            <div class="journey__step-label" data-i18n="jstep0">Home</div>
+            <div class="journey__marbles" id="stepMarbles0"></div>
+          </div>
+          <div class="journey__connector"></div>
+          <div class="journey__step" data-step="1">
+            <div class="journey__step-node"></div>
+            <div class="journey__step-label" data-i18n="jstep1">GP</div>
+            <div class="journey__marbles" id="stepMarbles1"></div>
+          </div>
+          <div class="journey__connector"></div>
+          <div class="journey__step" data-step="2">
+            <div class="journey__step-node"></div>
+            <div class="journey__step-label" data-i18n="jstep2">Hospital</div>
+            <div class="journey__marbles" id="stepMarbles2"></div>
+          </div>
+          <div class="journey__connector"></div>
+          <div class="journey__step" data-step="3">
+            <div class="journey__step-node"></div>
+            <div class="journey__step-label" data-i18n="jstep3">Spitex</div>
+            <div class="journey__marbles" id="stepMarbles3"></div>
+          </div>
+          <div class="journey__connector"></div>
+          <div class="journey__step" data-step="4">
+            <div class="journey__step-node"></div>
+            <div class="journey__step-label" data-i18n="jstep4">Home Care</div>
+            <div class="journey__marbles" id="stepMarbles4"></div>
+          </div>
+        </div>
+
+        <div class="journey__message" id="journeyMessage" aria-live="polite"></div>
+        <div class="journey__controls">
+          <button class="btn btn--ghost"    id="journeyReset" data-i18n="exp_reset">Reset</button>
+          <button class="btn btn--primary"  id="journeyNext"  data-i18n="exp_next">Move Patient →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       10 · IMPACT
+  ═══════════════════════════════════════════ -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <h2 class="section-title fade-in" data-i18n="impact_title">Impact &amp; Strategy</h2>
+      <p class="section-lead fade-in" data-i18n="impact_lead">The project does not claim to solve fragmentation alone. Instead, it creates conditions for care coordination to become more visible, shareable and discussable — working at the level of interactions, communication and handovers.</p>
+      <div class="impact-grid fade-in">
+        <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp1">Shared language for coordination</p></div>
+        <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp2">Visible coordination work</p></div>
+        <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp3">Clearer handovers at transitions</p></div>
+        <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp4">Reduced repetition of patient information</p></div>
+        <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp5">Stronger relational coordination</p></div>
+        <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp6">Support for SOMEKO's recognition</p></div>
+        <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp7">Bridge between everyday practice and system-level transformation</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       12 · CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner fade-in">
+        <h2 data-i18n="contact_title">Get in Touch</h2>
+        <p data-i18n="contact_desc">Do you work in healthcare, coordination, or system design? Have thoughts on the interventions, the reframing, or the approach? I would love to hear from you.</p>
+        <a href="mailto:rosanabaumann@gmail.com?subject=Passing the Baton — Message" class="btn btn--primary contact__btn">
+          rosanabaumann@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__title">Passing the Baton</div>
+        <div class="footer__sub" data-i18n="footer_sub">Designing Visible Care Coordination at Socio-Medical Transitions</div>
+        <div class="footer__author">Rosana del Carmen Baumann</div>
+        <div class="footer__meta" data-i18n="footer_meta">Bachelor Graduation Project · Lucerne University of Applied Sciences and Arts · 2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
