@@ -135,7 +135,8 @@
       <p class="hero__sub" data-i18n="hero_sub">Designing Visible Care Coordination at Socio-Medical Transitions</p>
       <div class="hero__btns">
         <a href="#project"       class="btn btn--primary" data-i18n="hero_btn1">Explore the Project</a>
-        <a href="#interventions" class="btn btn--ghost"   data-i18n="hero_btn2">View the Interventions</a>
+        <a href="#interventions" class="btn btn--ghost"   data-i18n="hero_btn2">View the Design Response</a>
+        <a href="#reflection"    class="btn btn--ghost"   data-i18n="hero_btn3">Leave a Reflection</a>
       </div>
     </div>
 
@@ -589,73 +590,6 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       08 · INTERVENTIONS
-  ═══════════════════════════════════════════ -->
-  <section class="interventions" id="interventions">
-    <div class="container">
-      <h2 class="section-title fade-in" data-i18n="int_title">The Interventions</h2>
-
-      <!-- Intervention 1 -->
-      <div class="intervention fade-in">
-        <div class="intervention__meta">
-          <span class="intervention__label" data-i18n="int1_label">Intervention 01</span>
-        </div>
-        <div class="intervention__body">
-          <h3 class="intervention__title" data-i18n="int1_title">Coordination is Care</h3>
-          <p class="intervention__sub"  data-i18n="int1_sub">An Advocacy Paper</p>
-          <p data-i18n="int1_desc">The advocacy paper creates shared language for care coordination. It helps healthcare professionals, organisations and network partners understand why coordination work matters, where it currently remains invisible, and what conditions are needed to recognise it as part of care itself.</p>
-          <ul class="intervention__points">
-            <li data-i18n="int1_p1">Creates a shared vocabulary around coordination</li>
-            <li data-i18n="int1_p2">Makes invisible coordination work visible and discussable</li>
-            <li data-i18n="int1_p3">Addresses healthcare professionals, networks and institutions</li>
-            <li data-i18n="int1_p4">Supports SOMEKO's recognition and embedding in care pathways</li>
-          </ul>
-          <!-- Replace href with the actual PDF path once you add it to assets/documents/ -->
-          <a href="assets/documents/advocacy-paper.pdf" class="btn btn--primary" target="_blank" data-i18n="int1_btn">Download Advocacy Paper</a>
-        </div>
-      </div>
-
-      <!-- Intervention 2 + Interactive Baton Card -->
-      <div class="intervention fade-in">
-        <div class="intervention__meta">
-          <span class="intervention__label" data-i18n="int2_label">Intervention 02</span>
-        </div>
-        <div class="intervention__body">
-          <h3 class="intervention__title" data-i18n="int2_title">Socio-Medical Handover Baton</h3>
-          <p class="intervention__sub"  data-i18n="int2_sub">A Coordination Tool</p>
-          <p data-i18n="int2_desc">The baton is a structured, system-independent coordination tool that travels with the patient across transitions. It supports handovers between actors by making key socio-medical information visible, transferable and shared. It does not replace professional judgement — it creates a shared handover structure so that what one actor knows, the next one receives.</p>
-        </div>
-        <!-- Interactive Baton Card -->
-        <div class="baton-card fade-in" id="batonCard" aria-label="Interactive baton card">
-          <div class="baton-card__top">
-            <span class="baton-card__title" data-i18n="baton_card_title">Socio-Medical Handover Baton</span>
-            <div class="baton-card__nav" aria-label="Navigate baton fields">
-              <button id="batonPrev" aria-label="Previous field">←</button>
-              <span id="batonCounter" aria-live="polite">1 / 8</span>
-              <button id="batonNext" aria-label="Next field">→</button>
-            </div>
-          </div>
-          <div class="baton-card__fields" id="batonFields">
-            <div class="baton-field active"><div class="baton-field__label" data-i18n="bf1_l">Patient Situation</div><div class="baton-field__desc" data-i18n="bf1_d">Current health status, primary diagnosis, and immediate needs.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf2_l">Social Context</div><div class="baton-field__desc" data-i18n="bf2_d">Living situation, family support, social isolation, language barriers.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf3_l">Current Support System</div><div class="baton-field__desc" data-i18n="bf3_d">Who is already involved — formally and informally.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf4_l">Open Coordination Tasks</div><div class="baton-field__desc" data-i18n="bf4_d">What still needs to happen — and who is responsible.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf5_l">Involved Actors</div><div class="baton-field__desc" data-i18n="bf5_d">All professionals and institutions currently contributing to this care situation.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf6_l">Urgent Risks</div><div class="baton-field__desc" data-i18n="bf6_d">Critical flags that the next actor must know immediately.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf7_l">Next Steps</div><div class="baton-field__desc" data-i18n="bf7_d">Planned actions, upcoming appointments, pending decisions.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf8_l">Responsible Contact</div><div class="baton-field__desc" data-i18n="bf8_d">Who holds the baton now — and who to reach for questions.</div></div>
-          </div>
-          <div class="baton-card__dots" id="batonDots" aria-hidden="true">
-            <span class="bc-dot active"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
-            <span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
        09 · EXPERIENCE IT
   ═══════════════════════════════════════════ -->
   <section class="experience" id="experience">
@@ -730,17 +664,67 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       12 · CONTACT
+       THE DESIGN RESPONSE (after Impact)
   ═══════════════════════════════════════════ -->
-  <section class="contact" id="contact">
+  <section class="interventions" id="interventions">
     <div class="container">
-      <div class="contact__inner fade-in">
-        <h2 data-i18n="contact_title">Get in Touch</h2>
-        <p data-i18n="contact_desc">Do you work in healthcare, coordination, or system design? Have thoughts on the interventions, the reframing, or the approach? I would love to hear from you.</p>
-        <a href="mailto:rosanabaumann@gmail.com?subject=Passing the Baton — Message" class="btn btn--primary contact__btn">
-          rosanabaumann@gmail.com
-        </a>
+      <h2 class="section-title fade-in">The Design Response</h2>
+
+      <!-- Intervention 1 -->
+      <div class="intervention fade-in">
+        <div class="intervention__meta">
+          <span class="intervention__label" data-i18n="int1_label">Intervention 01</span>
+        </div>
+        <div class="intervention__body">
+          <h3 class="intervention__title" data-i18n="int1_title">Coordination is Care</h3>
+          <p class="intervention__sub" data-i18n="int1_sub">An Advocacy Paper</p>
+          <p data-i18n="int1_desc">The advocacy paper creates shared language for care coordination. It helps healthcare professionals, organisations and network partners understand why coordination work matters, where it currently remains invisible, and what conditions are needed to recognise it as part of care itself.</p>
+          <ul class="intervention__points">
+            <li data-i18n="int1_p1">Creates a shared vocabulary around coordination</li>
+            <li data-i18n="int1_p2">Makes invisible coordination work visible and discussable</li>
+            <li data-i18n="int1_p3">Addresses healthcare professionals, networks and institutions</li>
+            <li data-i18n="int1_p4">Supports SOMEKO's recognition and embedding in care pathways</li>
+          </ul>
+          <a href="assets/documents/advocacy-paper.pdf" class="btn btn--primary" target="_blank" data-i18n="int1_btn">Download Advocacy Paper</a>
+        </div>
       </div>
+
+      <!-- Intervention 2 + Interactive Baton Card -->
+      <div class="intervention fade-in">
+        <div class="intervention__meta">
+          <span class="intervention__label" data-i18n="int2_label">Intervention 02</span>
+        </div>
+        <div class="intervention__body">
+          <h3 class="intervention__title" data-i18n="int2_title">Socio-Medical Handover Baton</h3>
+          <p class="intervention__sub" data-i18n="int2_sub">A Coordination Tool</p>
+          <p data-i18n="int2_desc">The baton is a structured, system-independent coordination tool that travels with the patient across transitions. It supports handovers between actors by making key socio-medical information visible, transferable and shared. It does not replace professional judgement — it creates a shared handover structure so that what one actor knows, the next one receives.</p>
+        </div>
+        <div class="baton-card fade-in" id="batonCard" aria-label="Interactive baton card">
+          <div class="baton-card__top">
+            <span class="baton-card__title" data-i18n="baton_card_title">Socio-Medical Handover Baton</span>
+            <div class="baton-card__nav" aria-label="Navigate baton fields">
+              <button id="batonPrev" aria-label="Previous field">←</button>
+              <span id="batonCounter" aria-live="polite">1 / 8</span>
+              <button id="batonNext" aria-label="Next field">→</button>
+            </div>
+          </div>
+          <div class="baton-card__fields" id="batonFields">
+            <div class="baton-field active"><div class="baton-field__label" data-i18n="bf1_l">Patient Situation</div><div class="baton-field__desc" data-i18n="bf1_d">Current health status, primary diagnosis, and immediate needs.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf2_l">Social Context</div><div class="baton-field__desc" data-i18n="bf2_d">Living situation, family support, social isolation, language barriers.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf3_l">Current Support System</div><div class="baton-field__desc" data-i18n="bf3_d">Who is already involved — formally and informally.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf4_l">Open Coordination Tasks</div><div class="baton-field__desc" data-i18n="bf4_d">What still needs to happen — and who is responsible.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf5_l">Involved Actors</div><div class="baton-field__desc" data-i18n="bf5_d">All professionals and institutions currently contributing to this care situation.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf6_l">Urgent Risks</div><div class="baton-field__desc" data-i18n="bf6_d">Critical flags that the next actor must know immediately.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf7_l">Next Steps</div><div class="baton-field__desc" data-i18n="bf7_d">Planned actions, upcoming appointments, pending decisions.</div></div>
+            <div class="baton-field"><div class="baton-field__label" data-i18n="bf8_l">Responsible Contact</div><div class="baton-field__desc" data-i18n="bf8_d">Who holds the baton now — and who to reach for questions.</div></div>
+          </div>
+          <div class="baton-card__dots" id="batonDots" aria-hidden="true">
+            <span class="bc-dot active"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
+            <span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -779,30 +763,23 @@
             class="tally-frame"
           ></iframe>
 
-          <!-- Placeholder shown until the real Tally form is connected -->
-          <div class="tally-placeholder" id="tallyPlaceholder">
-            <div class="tally-placeholder__field">
-              <label>Name <span class="tally-optional">(optional)</span></label>
-              <input type="text" placeholder="Your name" disabled/>
-            </div>
-            <div class="tally-placeholder__field">
-              <label>Comment / Reflection</label>
-              <textarea rows="4" placeholder="Share your thoughts on whether the Handover Baton would support or complicate coordination in your context…" disabled></textarea>
-            </div>
-            <div class="tally-placeholder__field">
-              <label>Would this be helpful in your context?</label>
-              <div class="tally-options">
-                <label class="tally-radio"><input type="radio" disabled/> Yes</label>
-                <label class="tally-radio"><input type="radio" disabled/> No</label>
-                <label class="tally-radio"><input type="radio" disabled/> Not sure</label>
-              </div>
-            </div>
-            <div class="tally-placeholder__note">
-              ↑ Placeholder — connect a Tally form to activate. See comment in HTML for instructions.
-            </div>
-          </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT (after reflection)
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner fade-in">
+        <h2 data-i18n="contact_title">Get in Touch</h2>
+        <p data-i18n="contact_desc">Do you work in healthcare, coordination, or system design? Have thoughts on the interventions, the reframing, or the approach? I would love to hear from you.</p>
+        <a href="mailto:rosanabaumann@gmail.com?subject=Passing the Baton — Message" class="btn btn--primary contact__btn">
+          rosanabaumann@gmail.com
+        </a>
       </div>
     </div>
   </section>
