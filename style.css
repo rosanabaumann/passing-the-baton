@@ -1988,6 +1988,11 @@ ul { list-style: none; }
 /* about--top: slightly more compact */
 .about--top { padding: var(--space-md) 0; }
 
+/* about--visual: full-width exhibition image */
+.about--visual { padding: 0; background: var(--bg); }
+.about__visual-wrap { width: 100%; overflow: hidden; }
+.about__visual-img { width: 100%; height: auto; display: block; }
+
 /* ── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 900px) {
   .process-vis { flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
