@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
 
@@ -739,6 +740,73 @@
         <a href="mailto:rosanabaumann@gmail.com?subject=Passing the Baton — Message" class="btn btn--primary contact__btn">
           rosanabaumann@gmail.com
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       REFLECTION (Tally form)
+  ═══════════════════════════════════════════ -->
+  <section class="reflection" id="reflection">
+    <div class="container">
+      <div class="reflection__inner fade-in">
+
+        <div class="reflection__header">
+          <p class="reflection__eyebrow">Open question</p>
+          <h2 class="reflection__title">Leave a reflection</h2>
+          <p class="reflection__question">Can coordination become more visible without becoming more bureaucratic?</p>
+          <p class="reflection__intro">The baton aims to support continuity across transitions, but it also requires a more explicit handover process.</p>
+          <p class="reflection__prompt">How would you navigate this trade-off? Do you think the benefits outweigh the additional effort? Why or why not?</p>
+        </div>
+
+        <!-- ── TALLY FORM EMBED ──────────────────────────────
+             To connect a real form:
+             1. Go to tally.so and create a free account
+             2. Build a form with these fields:
+                - Name (optional, short text)
+                - Comment / Reflection (long text)
+                - Would this be helpful? (multiple choice: Yes / No / Not sure)
+             3. Click Share → Embed → copy the form ID from the URL
+             4. Replace YOUR_TALLY_FORM_ID below with your actual form ID
+             5. The src should look like: https://tally.so/embed/wgXxxx?...
+        ─────────────────────────────────────────────────── -->
+        <div class="tally-wrapper">
+          <iframe
+            data-tally-src="https://tally.so/embed/ZjQyEA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="480"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Leave a reflection"
+            class="tally-frame"
+          ></iframe>
+
+          <!-- Placeholder shown until the real Tally form is connected -->
+          <div class="tally-placeholder" id="tallyPlaceholder">
+            <div class="tally-placeholder__field">
+              <label>Name <span class="tally-optional">(optional)</span></label>
+              <input type="text" placeholder="Your name" disabled/>
+            </div>
+            <div class="tally-placeholder__field">
+              <label>Comment / Reflection</label>
+              <textarea rows="4" placeholder="Share your thoughts on whether the Handover Baton would support or complicate coordination in your context…" disabled></textarea>
+            </div>
+            <div class="tally-placeholder__field">
+              <label>Would this be helpful in your context?</label>
+              <div class="tally-options">
+                <label class="tally-radio"><input type="radio" disabled/> Yes</label>
+                <label class="tally-radio"><input type="radio" disabled/> No</label>
+                <label class="tally-radio"><input type="radio" disabled/> Not sure</label>
+              </div>
+            </div>
+            <div class="tally-placeholder__note">
+              ↑ Placeholder — connect a Tally form to activate. See comment in HTML for instructions.
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

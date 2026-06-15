@@ -1078,6 +1078,131 @@ ul { list-style: none; }
 }
 .contact__btn { font-size: 0.95rem !important; }
 
+/* ── REFLECTION ─────────────────────────────────────────── */
+.reflection {
+  padding: var(--space-xl) 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.reflection__inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.reflection__header {
+  margin-bottom: var(--space-lg);
+}
+.reflection__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent2);
+  margin-bottom: 0.75rem;
+}
+.reflection__title {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+}
+.reflection__question {
+  font-family: var(--font-head);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+.reflection__intro {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.75;
+  margin-bottom: 0.6rem;
+}
+.reflection__prompt {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.75;
+  font-style: italic;
+}
+
+/* Tally embed wrapper */
+.tally-wrapper {
+  position: relative;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.tally-frame {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+/* Placeholder (visible until real Tally form is connected) */
+.tally-placeholder {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.tally-placeholder__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tally-placeholder__field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.tally-optional {
+  font-weight: 400;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+.tally-placeholder__field input,
+.tally-placeholder__field textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  resize: none;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+.tally-options {
+  display: flex;
+  gap: 1.5rem;
+}
+.tally-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+.tally-placeholder__note {
+  font-size: 0.72rem;
+  color: var(--accent2);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.6rem 0.9rem;
+  background: rgba(196,112,90,.08);
+  border-radius: var(--radius);
+  border: 1px dashed rgba(196,112,90,.3);
+}
+
 /* ── FOOTER ─────────────────────────────────────────────── */
 .footer {
   background: var(--text);
