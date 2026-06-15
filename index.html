@@ -61,119 +61,17 @@
       </h1>
     </div>
 
-    <!-- centrepiece: baton handover illustration in project visual language -->
+    <!-- centrepiece: baton handover illustration -->
     <div class="hero__race" aria-label="Hospital passing the handover baton to a Spitex Nurse">
-      <svg class="race-svg" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" overflow="visible">
-        <defs>
-          <!-- Blob gradient — pale pink from project illustration -->
-          <radialGradient id="blobGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#E8C4BC" stop-opacity="0.55"/>
-            <stop offset="100%" stop-color="#E8C4BC" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-
-        <!-- BACKGROUND BLOB — project illustration style -->
-        <ellipse cx="400" cy="185" rx="240" ry="165" fill="url(#blobGrad)" class="baton-pulse"/>
-
-        <!-- ══════════════════════════════════════════
-             FIGURE A — HOSPITAL
-             Standing upright, arm extended, passing
-             Palette: warm tan from "Transformations" ring
-        ══════════════════════════════════════════ -->
-        <g class="runner runner--a">
-          <!-- head -->
-          <ellipse cx="215" cy="60" rx="26" ry="30" fill="#F7F1EC" stroke="#2B1E1B" stroke-width="2.6"/>
-          <!-- neck -->
-          <line x1="215" y1="90" x2="215" y2="105" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <!-- torso — wide, shirt-like, filled -->
-          <rect x="193" y="105" width="44" height="78" rx="14" fill="#F0E8E0" stroke="#2B1E1B" stroke-width="2.6"/>
-          <!-- left arm — relaxed at side -->
-          <line x1="196" y1="118" x2="168" y2="158" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <line x1="168" y1="158" x2="158" y2="185" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <!-- right arm — outstretched forward holding baton -->
-          <line x1="234" y1="118" x2="290" y2="148" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <line x1="290" y1="148" x2="352" y2="163" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <!-- left leg -->
-          <line x1="205" y1="183" x2="186" y2="255" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-          <line x1="186" y1="255" x2="172" y2="278" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-          <!-- foot L -->
-          <ellipse cx="166" cy="281" rx="14" ry="6" fill="#2B1E1B" opacity="0.18"/>
-          <!-- right leg — step forward -->
-          <line x1="225" y1="183" x2="248" y2="258" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-          <line x1="248" y1="258" x2="258" y2="278" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-          <!-- foot R -->
-          <ellipse cx="262" cy="281" rx="14" ry="6" fill="#2B1E1B" opacity="0.18"/>
-        </g>
-
-        <!-- ══════════════════════════════════════════
-             THE BATON — short, thick, project red
-             Deep burgundy from innermost design circle
-        ══════════════════════════════════════════ -->
-        <g class="baton-rod">
-          <!-- shadow -->
-          <rect x="353" y="163" width="95" height="20" rx="10" fill="rgba(43,30,27,0.18)" transform="translate(3,5)"/>
-          <!-- body — deep burgundy -->
-          <rect x="353" y="159" width="95" height="20" rx="10" fill="#8B3A4A"/>
-          <!-- highlight shine -->
-          <rect x="360" y="163" width="38" height="6" rx="3" fill="rgba(255,255,255,0.32)"/>
-          <!-- end grip caps -->
-          <circle cx="358" cy="169" r="11" fill="#6B2A38"/>
-          <circle cx="443" cy="169" r="11" fill="#6B2A38"/>
-        </g>
-
-        <!-- SPARK LINES — the handover moment -->
-        <g opacity="0.85">
-          <line x1="448" y1="148" x2="448" y2="136" stroke="#8B3A4A" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="458" y1="152" x2="466" y2="142" stroke="#8B3A4A" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="438" y1="152" x2="430" y2="142" stroke="#8B3A4A" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="462" y1="162" x2="474" y2="158" stroke="#8B3A4A" stroke-width="2" stroke-linecap="round"/>
-          <line x1="434" y1="162" x2="422" y2="158" stroke="#8B3A4A" stroke-width="2" stroke-linecap="round"/>
-        </g>
-
-        <!-- ══════════════════════════════════════════
-             FIGURE B — SPITEX NURSE
-             Running forward, arm reaching back to receive
-             Palette: blue-grey from "Systems" ring
-        ══════════════════════════════════════════ -->
-        <g class="runner runner--b">
-          <!-- head -->
-          <ellipse cx="585" cy="55" rx="26" ry="30" fill="#F7F1EC" stroke="#2B1E1B" stroke-width="2.6"/>
-          <!-- neck -->
-          <line x1="585" y1="85" x2="585" y2="100" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <!-- torso — leaning forward slightly -->
-          <rect x="563" y="100" width="44" height="76" rx="14" fill="#E8EFF4" stroke="#2B1E1B" stroke-width="2.6"/>
-          <!-- left arm — reaching BACK to receive baton (toward A) -->
-          <line x1="566" y1="114" x2="510" y2="148" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <line x1="510" y1="148" x2="448" y2="166" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <!-- right arm — swinging forward for balance -->
-          <line x1="604" y1="114" x2="640" y2="88"  stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <line x1="640" y1="88"  x2="658" y2="108" stroke="#2B1E1B" stroke-width="7" stroke-linecap="round"/>
-          <!-- left leg — forward stride -->
-          <line x1="575" y1="176" x2="620" y2="254" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-          <line x1="620" y1="254" x2="635" y2="278" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-          <!-- foot L -->
-          <ellipse cx="640" cy="281" rx="14" ry="6" fill="#2B1E1B" opacity="0.18"/>
-          <!-- right leg — lifted behind, running -->
-          <line x1="595" y1="176" x2="558" y2="235" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-          <line x1="558" y1="235" x2="542" y2="218" stroke="#2B1E1B" stroke-width="8" stroke-linecap="round"/>
-        </g>
-
-        <!-- ROLE LABEL CHIPS -->
-        <!-- Hospital chip -->
-        <rect x="158" y="302" width="114" height="28" rx="14" fill="#A8A282" opacity="0.18"/>
-        <text x="215" y="321" text-anchor="middle"
-              font-family="Poppins, Helvetica Neue, sans-serif"
-              font-size="11.5" font-weight="700" letter-spacing="0.06em"
-              fill="#6B6248">Hospital</text>
-
-        <!-- Spitex Nurse chip -->
-        <rect x="522" y="302" width="128" height="28" rx="14" fill="#B8C8D4" opacity="0.28"/>
-        <text x="586" y="321" text-anchor="middle"
-              font-family="Poppins, Helvetica Neue, sans-serif"
-              font-size="11.5" font-weight="700" letter-spacing="0.06em"
-              fill="#4A6070">Spitex Nurse</text>
-
-      </svg>
+      <div class="hero__handover-wrap">
+        <img src="assets/images/baton-handover.png"
+             alt="Two care actors passing the handover baton"
+             class="hero__handover-img"/>
+        <div class="hero__actor-labels" aria-hidden="true">
+          <span class="hero__actor-label">Hospital</span>
+          <span class="hero__actor-label">Spitex Nurse</span>
+        </div>
+      </div>
     </div>
 
     <!-- subtitle + CTA pinned to bottom -->

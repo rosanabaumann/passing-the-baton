@@ -280,11 +280,38 @@ ul { list-style: none; }
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 960px;
-  padding: 0 var(--space-md);
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.hero__handover-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.hero__handover-img {
+  width: clamp(260px, 38vw, 520px);
+  height: auto;
+  display: block;
+  /* subtle float animation */
+  animation: runnerSway 3.5s ease-in-out infinite;
+}
+.hero__actor-labels {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(260px, 38vw, 520px);
+  padding: 0 1.5rem;
+}
+.hero__actor-label {
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  opacity: 0.6;
 }
 .race-svg {
   width: 100%;
