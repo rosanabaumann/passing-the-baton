@@ -94,25 +94,76 @@ document.querySelectorAll('.phase__header').forEach(btn => {
   });
 });
 
-/* ── BATON VARIANT TABS ─────────────────────────────────── */
-document.querySelectorAll('.baton-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.baton-tab').forEach(t => {
-      t.classList.remove('active');
-      t.setAttribute('aria-selected', 'false');
+/* ── PDF.JS EXHIBITION PREVIEWS ─────────────────────────── */
+if (window.pdfjsLib) {
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+}
+
+async function renderPDF(url, pagesContainerId, loadingId) {
+  if (!window.pdfjsLib) return;
+  const container = document.getElementById(pagesContainerId);
+  const loading   = document.getElementById(loadingId);
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  try {
+    const pdf = await pdfjsLib.getDocument(url).promise;
+    const totalPages = Math.min(pdf.numPages, 6); // render up to 6 pages
+
+    for (let i = 1; i <= totalPages; i++) {
+      const page     = await pdf.getPage(i);
+      const viewport = page.getViewport({ scale: 1.6 });
+      const canvas   = document.createElement('canvas');
+      const ctx      = canvas.getContext('2d');
+      canvas.width   = viewport.width;
+      canvas.height  = viewport.height;
+      canvas.style.borderRadius = '6px';
+      container.appendChild(canvas);
+      await page.render({ canvasContext: ctx, viewport }).promise;
+    }
+
+    if (loading) loading.classList.add('hidden');
+  } catch (e) {
+    if (loading) loading.classList.add('hidden');
+    container.innerHTML = `<div style="padding:2rem;text-align:center;color:var(--text-soft);font-size:0.85rem;opacity:0.6;">Preview unavailable — open document via link above.</div>`;
+  }
+}
+
+/* Render all three on load */
+document.addEventListener('DOMContentLoaded', () => {
+  renderPDF(
+    'assets/documents/Coordination_is_Care_Advocacy_Paper.pdf',
+    'pdf-pages-advocacy', 'pdf-loading-advocacy'
+  );
+  renderPDF(
+    'assets/documents/Handover_Baton_Ambulant_Emmental.pdf',
+    'pdf-pages-baton', 'pdf-loading-baton'
+  );
+  renderPDF(
+    'assets/documents/Einwilligungserklaerung.pdf',
+    'pdf-pages-consent', 'pdf-loading-consent'
+  );
+});
+
+/* ── BATON VARIANT PILLS ─────────────────────────────────── */
+document.querySelectorAll('.baton-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.baton-pill').forEach(p => {
+      p.classList.remove('active');
+      p.setAttribute('aria-selected', 'false');
     });
-    tab.classList.add('active');
-    tab.setAttribute('aria-selected', 'true');
+    pill.classList.add('active');
+    pill.setAttribute('aria-selected', 'true');
 
-    const pdf      = tab.dataset.pdf;
-    const frameId  = tab.dataset.target;
-    const frame    = document.getElementById(frameId);
-    const filename = document.getElementById('baton-filename');
-    const openLink = document.getElementById('baton-open-link');
+    const pdf      = pill.dataset.pdf;
+    const viewLink = document.getElementById('baton-view-link');
+    if (viewLink) viewLink.href = pdf;
 
-    if (frame)    frame.src = pdf + '#toolbar=0&navpanes=0&scrollbar=1&view=FitH';
-    if (filename) filename.textContent = pdf.split('/').pop().replace(/_/g, ' ');
-    if (openLink) openLink.href = pdf;
+    const loading = document.getElementById('pdf-loading-baton');
+    if (loading) loading.classList.remove('hidden');
+    renderPDF(pdf, 'pdf-pages-baton', 'pdf-loading-baton');
   });
 });
 
