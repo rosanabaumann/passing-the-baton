@@ -669,58 +669,134 @@
   <section class="interventions" id="interventions">
     <div class="container">
       <h2 class="section-title fade-in">The Design Response</h2>
+      <p class="section-lead fade-in">Three artefacts. One coordination ecosystem.</p>
 
-      <!-- Intervention 1 -->
-      <div class="intervention fade-in">
-        <div class="intervention__meta">
-          <span class="intervention__label" data-i18n="int1_label">Intervention 01</span>
+      <!-- ── COORDINATION PACKAGE FLOW ─────────────────── -->
+      <div class="coord-flow fade-in" aria-label="Coordination package overview">
+        <div class="coord-flow__item">
+          <div class="coord-flow__badge">WHY</div>
+          <div class="coord-flow__label">Coordination is Care</div>
+          <div class="coord-flow__sub">Creates shared understanding</div>
         </div>
-        <div class="intervention__body">
-          <h3 class="intervention__title" data-i18n="int1_title">Coordination is Care</h3>
-          <p class="intervention__sub" data-i18n="int1_sub">An Advocacy Paper</p>
-          <p data-i18n="int1_desc">The advocacy paper creates shared language for care coordination. It helps healthcare professionals, organisations and network partners understand why coordination work matters, where it currently remains invisible, and what conditions are needed to recognise it as part of care itself.</p>
-          <ul class="intervention__points">
-            <li data-i18n="int1_p1">Creates a shared vocabulary around coordination</li>
-            <li data-i18n="int1_p2">Makes invisible coordination work visible and discussable</li>
-            <li data-i18n="int1_p3">Addresses healthcare professionals, networks and institutions</li>
-            <li data-i18n="int1_p4">Supports SOMEKO's recognition and embedding in care pathways</li>
-          </ul>
-          <a href="assets/documents/advocacy-paper.pdf" class="btn btn--primary" target="_blank" data-i18n="int1_btn">Download Advocacy Paper</a>
+        <div class="coord-flow__arrow" aria-hidden="true">→</div>
+        <div class="coord-flow__item">
+          <div class="coord-flow__badge">HOW</div>
+          <div class="coord-flow__label">Handover Baton</div>
+          <div class="coord-flow__sub">Creates shared structure</div>
+        </div>
+        <div class="coord-flow__arrow" aria-hidden="true">→</div>
+        <div class="coord-flow__item">
+          <div class="coord-flow__badge">ENABLE</div>
+          <div class="coord-flow__label">Consent Form</div>
+          <div class="coord-flow__sub">Creates permission to share</div>
         </div>
       </div>
 
-      <!-- Intervention 2 + Interactive Baton Card -->
-      <div class="intervention fade-in">
-        <div class="intervention__meta">
-          <span class="intervention__label" data-i18n="int2_label">Intervention 02</span>
+      <!-- ── INTERVENTION 01 ────────────────────────────── -->
+      <div class="artefact fade-in" id="artefact-advocacy">
+        <div class="artefact__header">
+          <span class="artefact__number">01</span>
+          <div class="artefact__meta">
+            <h3 class="artefact__title">Coordination is Care</h3>
+            <p class="artefact__type">Advocacy Paper</p>
+          </div>
+          <span class="artefact__role-badge why-badge">WHY</span>
         </div>
-        <div class="intervention__body">
-          <h3 class="intervention__title" data-i18n="int2_title">Socio-Medical Handover Baton</h3>
-          <p class="intervention__sub" data-i18n="int2_sub">A Coordination Tool</p>
-          <p data-i18n="int2_desc">The baton is a structured, system-independent coordination tool that travels with the patient across transitions. It supports handovers between actors by making key socio-medical information visible, transferable and shared. It does not replace professional judgement — it creates a shared handover structure so that what one actor knows, the next one receives.</p>
-        </div>
-        <div class="baton-card fade-in" id="batonCard" aria-label="Interactive baton card">
-          <div class="baton-card__top">
-            <span class="baton-card__title" data-i18n="baton_card_title">Socio-Medical Handover Baton</span>
-            <div class="baton-card__nav" aria-label="Navigate baton fields">
-              <button id="batonPrev" aria-label="Previous field">←</button>
-              <span id="batonCounter" aria-live="polite">1 / 8</span>
-              <button id="batonNext" aria-label="Next field">→</button>
+        <p class="artefact__intro">The advocacy paper makes invisible coordination work visible. It creates a shared language for socio-medical coordination and explains why coordination should be understood as part of care itself.</p>
+        <div class="pdf-viewer">
+          <div class="pdf-viewer__toolbar">
+            <span class="pdf-viewer__filename">Coordination_is_Care_Advocacy_Paper.pdf</span>
+            <div class="pdf-viewer__actions">
+              <a href="assets/documents/Coordination_is_Care_Advocacy_Paper.pdf" target="_blank" class="pdf-action-btn" title="Open in new tab">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Open full screen
+              </a>
             </div>
           </div>
-          <div class="baton-card__fields" id="batonFields">
-            <div class="baton-field active"><div class="baton-field__label" data-i18n="bf1_l">Patient Situation</div><div class="baton-field__desc" data-i18n="bf1_d">Current health status, primary diagnosis, and immediate needs.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf2_l">Social Context</div><div class="baton-field__desc" data-i18n="bf2_d">Living situation, family support, social isolation, language barriers.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf3_l">Current Support System</div><div class="baton-field__desc" data-i18n="bf3_d">Who is already involved — formally and informally.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf4_l">Open Coordination Tasks</div><div class="baton-field__desc" data-i18n="bf4_d">What still needs to happen — and who is responsible.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf5_l">Involved Actors</div><div class="baton-field__desc" data-i18n="bf5_d">All professionals and institutions currently contributing to this care situation.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf6_l">Urgent Risks</div><div class="baton-field__desc" data-i18n="bf6_d">Critical flags that the next actor must know immediately.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf7_l">Next Steps</div><div class="baton-field__desc" data-i18n="bf7_d">Planned actions, upcoming appointments, pending decisions.</div></div>
-            <div class="baton-field"><div class="baton-field__label" data-i18n="bf8_l">Responsible Contact</div><div class="baton-field__desc" data-i18n="bf8_d">Who holds the baton now — and who to reach for questions.</div></div>
+          <div class="pdf-viewer__frame-wrap">
+            <iframe
+              src="assets/documents/Coordination_is_Care_Advocacy_Paper.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
+              class="pdf-viewer__frame"
+              title="Coordination is Care – Advocacy Paper"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
           </div>
-          <div class="baton-card__dots" id="batonDots" aria-hidden="true">
-            <span class="bc-dot active"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
-            <span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
+        </div>
+      </div>
+
+      <!-- ── INTERVENTION 02 ────────────────────────────── -->
+      <div class="artefact fade-in" id="artefact-baton">
+        <div class="artefact__header">
+          <span class="artefact__number">02</span>
+          <div class="artefact__meta">
+            <h3 class="artefact__title">Socio-Medical Handover Baton</h3>
+            <p class="artefact__type">Coordination Tool — 4 Variants</p>
+          </div>
+          <span class="artefact__role-badge how-badge">HOW</span>
+        </div>
+        <p class="artefact__intro">The baton is a system-independent coordination tool that supports socio-medical handovers across transitions. It makes critical information visible, transferable, and shareable so that what one actor knows, the next one receives.</p>
+
+        <!-- Tab navigation -->
+        <div class="baton-tabs" role="tablist" aria-label="Baton variants">
+          <button class="baton-tab active" role="tab" aria-selected="true"  data-pdf="assets/documents/Handover_Baton_Ambulant_Emmental.pdf"    data-target="baton-frame">Ambulatory · Emmental</button>
+          <button class="baton-tab"        role="tab" aria-selected="false" data-pdf="assets/documents/Handover_Baton_Ambulant_Oberaargau.pdf"  data-target="baton-frame">Ambulatory · Oberaargau</button>
+          <button class="baton-tab"        role="tab" aria-selected="false" data-pdf="assets/documents/Handover_Baton_Stationaer_Emmental.pdf"  data-target="baton-frame">Inpatient · Emmental</button>
+          <button class="baton-tab"        role="tab" aria-selected="false" data-pdf="assets/documents/Handover_Baton_Stationaer_Oberaargau.pdf" data-target="baton-frame">Inpatient · Oberaargau</button>
+        </div>
+
+        <div class="pdf-viewer">
+          <div class="pdf-viewer__toolbar">
+            <span class="pdf-viewer__filename" id="baton-filename">Handover_Baton_Ambulant_Emmental.pdf</span>
+            <div class="pdf-viewer__actions">
+              <a id="baton-open-link" href="assets/documents/Handover_Baton_Ambulant_Emmental.pdf" target="_blank" class="pdf-action-btn" title="Open in new tab">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Open full screen
+              </a>
+            </div>
+          </div>
+          <div class="pdf-viewer__frame-wrap">
+            <iframe
+              id="baton-frame"
+              src="assets/documents/Handover_Baton_Ambulant_Emmental.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
+              class="pdf-viewer__frame"
+              title="Socio-Medical Handover Baton"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── INTERVENTION 03 ────────────────────────────── -->
+      <div class="artefact fade-in" id="artefact-consent">
+        <div class="artefact__header">
+          <span class="artefact__number">03</span>
+          <div class="artefact__meta">
+            <h3 class="artefact__title">Consent &amp; Authorisation Form</h3>
+            <p class="artefact__type">Einwilligungserklärung und Vollmacht</p>
+          </div>
+          <span class="artefact__role-badge enable-badge">ENABLE</span>
+        </div>
+        <p class="artefact__intro">The baton only works when information can travel safely between actors. The consent and authorisation form establishes the legal and ethical foundation for shared socio-medical coordination by allowing relevant information to be exchanged across organisations with the patient's approval.</p>
+        <div class="pdf-viewer">
+          <div class="pdf-viewer__toolbar">
+            <span class="pdf-viewer__filename">Einwilligungserklaerung.pdf</span>
+            <div class="pdf-viewer__actions">
+              <a href="assets/documents/Einwilligungserklaerung.pdf" target="_blank" class="pdf-action-btn" title="Open in new tab">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Open full screen
+              </a>
+            </div>
+          </div>
+          <div class="pdf-viewer__frame-wrap">
+            <iframe
+              src="assets/documents/Einwilligungserklaerung.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
+              class="pdf-viewer__frame"
+              title="Einwilligungserklärung und Vollmacht"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>

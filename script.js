@@ -94,31 +94,26 @@ document.querySelectorAll('.phase__header').forEach(btn => {
   });
 });
 
-/* ── BATON CARD ─────────────────────────────────────────── */
-const batonFields  = document.querySelectorAll('.baton-field');
-const batonDots    = document.querySelectorAll('.bc-dot');
-const batonCounter = document.getElementById('batonCounter');
-let currentField   = 0;
+/* ── BATON VARIANT TABS ─────────────────────────────────── */
+document.querySelectorAll('.baton-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.baton-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
 
-function showField(index) {
-  batonFields.forEach((f, i) => f.classList.toggle('active', i === index));
-  batonDots.forEach((d, i)   => d.classList.toggle('active', i === index));
-  batonCounter.textContent = `${index + 1} / ${batonFields.length}`;
-}
+    const pdf      = tab.dataset.pdf;
+    const frameId  = tab.dataset.target;
+    const frame    = document.getElementById(frameId);
+    const filename = document.getElementById('baton-filename');
+    const openLink = document.getElementById('baton-open-link');
 
-document.getElementById('batonNext').addEventListener('click', () => {
-  currentField = (currentField + 1) % batonFields.length;
-  showField(currentField);
-});
-document.getElementById('batonPrev').addEventListener('click', () => {
-  currentField = (currentField - 1 + batonFields.length) % batonFields.length;
-  showField(currentField);
-});
-
-/* Keyboard navigation inside baton card */
-document.getElementById('batonCard').addEventListener('keydown', e => {
-  if (e.key === 'ArrowRight') { currentField = (currentField + 1) % batonFields.length; showField(currentField); }
-  if (e.key === 'ArrowLeft')  { currentField = (currentField - 1 + batonFields.length) % batonFields.length; showField(currentField); }
+    if (frame)    frame.src = pdf + '#toolbar=0&navpanes=0&scrollbar=1&view=FitH';
+    if (filename) filename.textContent = pdf.split('/').pop().replace(/_/g, ' ');
+    if (openLink) openLink.href = pdf;
+  });
 });
 
 /* ── MARBLE JOURNEY SIMULATION ──────────────────────────── */
