@@ -62,15 +62,11 @@
     </div>
 
     <!-- centrepiece: baton handover illustration -->
-    <div class="hero__race" aria-label="Hospital passing the handover baton to a Spitex Nurse">
+    <div class="hero__race" aria-label="Two care actors passing the handover baton">
       <div class="hero__handover-wrap">
-        <img src="assets/images/baton-handover.png"
+        <img src="assets/images/71.jpg"
              alt="Two care actors passing the handover baton"
              class="hero__handover-img"/>
-        <div class="hero__actor-labels" aria-hidden="true">
-          <span class="hero__actor-label">Hospital</span>
-          <span class="hero__actor-label">Spitex Nurse</span>
-        </div>
       </div>
     </div>
 
@@ -81,6 +77,15 @@
         <a href="#project"       class="btn btn--primary" data-i18n="hero_btn1">Explore the Project</a>
         <a href="#interventions" class="btn btn--ghost"   data-i18n="hero_btn2">View the Design Response</a>
         <a href="#reflection"    class="btn btn--ghost"   data-i18n="hero_btn3">Leave a Reflection</a>
+      </div>
+      <!-- Baton scroll indicator -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <svg class="baton-scroll-icon" viewBox="0 0 28 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="9" y="2" width="10" height="38" rx="5" fill="#C4705A"/>
+          <rect x="11" y="4" width="6" height="10" rx="3" fill="#6B2E2A" opacity="0.35"/>
+          <circle cx="14" cy="52" r="5" fill="#C4705A" opacity="0.35"/>
+        </svg>
+        <span class="hero__scroll-label">scroll</span>
       </div>
     </div>
 
@@ -94,8 +99,9 @@
       <div class="about__inner fade-in">
         <div class="about__text">
           <h2 data-i18n="about_title">About the Project</h2>
-          <p data-i18n="about_desc">This project was developed as a Bachelor graduation project in Design Management at Lucerne University of Applied Sciences and Arts, in collaboration with the Swiss Center for Design and Health.</p>
-          <p data-i18n="about_context">The research was conducted in the Emmental and Oberaargau region of Switzerland, in partnership with SOMEKO, GNE, GNO, COALA, and SCDH.</p>
+          <p>This project was developed as a Bachelor Graduation Project in Design Management, International at the Lucerne University of Applied Sciences and Arts (HSLU), in collaboration with the Swiss Center for Design and Health.</p>
+          <p>The design research was conducted in the Emmental and Oberaargau region of Switzerland and involved healthcare professionals, care coordinators, social workers, general practitioners, Spitex nurses, institutional partners, and regional stakeholders.</p>
+          <p>Through interviews, observations, document analysis, and co-design activities, the project explored how care coordination is currently experienced and how socio-medical transitions could become more visible, coordinated, and shared.</p>
         </div>
         <div class="about__author">
           <div class="about__name">Rosana del Carmen Baumann</div>
@@ -170,22 +176,6 @@
           <p data-i18n="imagine_s3">A relative clarifies unresolved insurance questions.</p>
         </div>
       </div>
-      <div class="imagine__statement fade-in">
-        <p data-i18n="imagine_intro">The Swiss healthcare system works.</p>
-        <p class="imagine__emphasis" data-i18n="imagine_emphasis">But often because people coordinate beyond their formal roles.</p>
-        <p class="imagine__sub" data-i18n="imagine_sub">Each contributes to the same care situation, but still works from a different part of the system. This work is called <em>invisible care coordination</em>.</p>
-      </div>
-      <!-- Floating task cloud -->
-      <div class="task-cloud fade-in" aria-label="Invisible coordination tasks">
-        <span class="task-bubble" style="--d:0s;   --x:0%;   --y:0%"   data-i18n="task1">organise transport</span>
-        <span class="task-bubble" style="--d:.4s;  --x:60%;  --y:10%"  data-i18n="task2">call relative</span>
-        <span class="task-bubble" style="--d:.8s;  --x:20%;  --y:50%"  data-i18n="task3">clarify medication</span>
-        <span class="task-bubble" style="--d:1.2s; --x:70%;  --y:55%"  data-i18n="task4">find nursing home</span>
-        <span class="task-bubble" style="--d:1.6s; --x:5%;   --y:80%"  data-i18n="task5">check insurance</span>
-        <span class="task-bubble" style="--d:2s;   --x:45%;  --y:80%"  data-i18n="task6">update GP</span>
-        <span class="task-bubble" style="--d:2.4s; --x:78%;  --y:82%"  data-i18n="task7">contact Spitex</span>
-        <span class="task-bubble" style="--d:2.8s; --x:35%;  --y:25%"  data-i18n="task8">repeat patient history</span>
-      </div>
     </div>
   </section>
 
@@ -195,6 +185,11 @@
   <section class="system-section" id="system">
     <div class="container">
       <h2 class="section-title fade-in" data-i18n="system_title">The System Challenge</h2>
+      <div class="system-statement fade-in">
+        <p class="system-statement__intro">The Swiss healthcare system works.</p>
+        <p class="system-statement__emphasis">But often because people coordinate beyond their formal roles.</p>
+        <p class="system-statement__sub">Each contributes to the same care situation, but still works from a different part of the system. This work is called <em>invisible care coordination</em>.</p>
+      </div>
       <p class="section-lead fade-in" data-i18n="system_lead">Switzerland's healthcare system is highly capable, but fragmented. Care increasingly spans medical treatment, nursing support, social work, relatives, insurers, home care and institutions. When these actors work in parallel without a shared overview, care becomes vulnerable.</p>
       <div class="sys-map fade-in" id="sysMap">
         <div class="sys-ring sys-ring--macro" data-level="macro">
