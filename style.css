@@ -327,11 +327,16 @@ ul { list-style: none; }
   width: 100%;
 }
 .hero__sub {
-  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
-  font-weight: 500;
+  font-family: var(--font-head);
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  font-weight: 600;
   color: var(--text-soft);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
   letter-spacing: 0.01em;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.45;
 }
 .hero__btns {
   display: flex;
@@ -339,6 +344,70 @@ ul { list-style: none; }
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* ── PANORAMA ───────────────────────────────────────────── */
+.panorama {
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+}
+.panorama__img-wrap {
+  position: relative;
+  width: 100%;
+}
+.panorama__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.panorama__phases {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+  background: linear-gradient(to top, rgba(247,241,236,0.88) 0%, rgba(247,241,236,0) 100%);
+}
+.panorama__phase {
+  text-align: center;
+}
+.panorama__phase-name {
+  font-family: var(--font-head);
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+  font-weight: 800;
+  color: var(--phase-color, var(--accent));
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 3px rgba(247,241,236,0.9);
+}
+
+/* ── PROJECT CONTEXT ─────────────────────────────────────── */
+.project-context {
+  padding: var(--space-xl) 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.project-context__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.project-context__title {
+  font-family: var(--font-head);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 1.75rem;
+}
+.project-context__body p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text-soft);
+  margin-bottom: 1.2rem;
+}
+.project-context__body p:last-child { margin-bottom: 0; }
 
 /* ── IMAGINE ────────────────────────────────────────────── */
 .imagine {
