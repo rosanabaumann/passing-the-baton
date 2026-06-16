@@ -167,6 +167,16 @@ document.querySelectorAll('.baton-pill').forEach(pill => {
   });
 });
 
+/* ── CHAPTER TOGGLES ────────────────────────────────────── */
+document.querySelectorAll('.chapter-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    const body = document.getElementById(btn.dataset.target);
+    btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    body.classList.toggle('open', !isOpen);
+  });
+});
+
 /* ── MARBLE JOURNEY SIMULATION ──────────────────────────── */
 const MARBLE_COLORS = [
   { bg: '#7DBEA8', label: 'transport' },

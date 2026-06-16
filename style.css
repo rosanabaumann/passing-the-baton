@@ -136,7 +136,7 @@ ul { list-style: none; }
 }
 .nav.scrolled { box-shadow: var(--shadow); }
 .nav__inner {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--space-md);
   height: 60px;
@@ -165,6 +165,7 @@ ul { list-style: none; }
   letter-spacing: 0.03em;
   transition: color var(--transition);
   position: relative;
+  white-space: nowrap;
 }
 .nav__links a::after {
   content: '';
@@ -237,11 +238,22 @@ ul { list-style: none; }
 .hb {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.14;
+  opacity: 0.22;
+  pointer-events: none;
 }
 .hb--1 { width: 600px; height: 600px; background: var(--macro); top: -150px; right: -150px; }
 .hb--2 { width: 400px; height: 400px; background: var(--meso);  bottom: 5%;  left: -100px; }
 .hb--3 { width: 300px; height: 300px; background: var(--micro); top: 35%;   right: 5%; }
+
+/* section decorative blobs */
+.section-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+}
 
 /* ── poster title ── */
 .hero__poster {
@@ -310,7 +322,7 @@ ul { list-style: none; }
   50%       { transform: translate(-50%,-50%) scale(1.7); opacity: 0; }
 }
 .hero__handover-img {
-  width: clamp(340px, 56vw, 780px);
+  width: clamp(440px, 72vw, 1020px);
   height: auto;
   display: block;
   position: relative;
@@ -324,9 +336,9 @@ ul { list-style: none; }
 .hero__actor-labels {
   display: flex;
   justify-content: space-between;
-  width: clamp(260px, 42vw, 600px);
-  padding: 0 3.5rem;
-  margin-top: 0.25rem;
+  width: clamp(340px, 54vw, 780px);
+  padding: 0 6rem;
+  margin-top: -0.5rem;
   position: relative;
   z-index: 2;
 }
@@ -381,7 +393,7 @@ ul { list-style: none; }
 }
 .hero__sub {
   font-family: var(--font-head);
-  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  font-size: clamp(1.69rem, 3.38vw, 2.6rem);
   font-weight: 600;
   color: var(--text-soft);
   margin-bottom: 2rem;
@@ -713,7 +725,7 @@ ul { list-style: none; }
 
 /* ── PROCESS ────────────────────────────────────────────── */
 .process {
-  padding: var(--space-xl) 0;
+  padding: var(--space-lg) 0 var(--space-xl) 0;
   background: var(--bg-warm);
 }
 .phases { display: flex; flex-direction: column; gap: 0; }
@@ -1987,6 +1999,50 @@ ul { list-style: none; }
 
 /* about--top: slightly more compact */
 .about--top { padding: var(--space-md) 0; }
+
+/* ── COLLAPSIBLE CHAPTER TOGGLES ────────────────────────── */
+.collapsible-section { border-top: 1.5px solid var(--border); }
+
+.chapter-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+  transition: opacity 0.2s;
+}
+.chapter-toggle:hover { opacity: 0.75; }
+.chapter-toggle__title {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.chapter-chevron {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: transform 0.35s ease;
+}
+.chapter-toggle[aria-expanded="false"] .chapter-chevron {
+  transform: rotate(-90deg);
+}
+.chapter-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.45s ease;
+}
+.chapter-body.open {
+  max-height: 9000px;
+}
 
 /* about--visual: full-width exhibition image */
 .about--visual { padding: 0; background: var(--bg); }
