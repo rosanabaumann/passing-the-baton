@@ -107,37 +107,11 @@
 
 
   <!-- ═══════════════════════════════════════════
-       02 · IMAGINE
-  ═══════════════════════════════════════════ -->
-  <section class="imagine" id="project">
-    <div class="container">
-      <div class="imagine__stories">
-        <div class="imagine__story fade-in">
-          <div class="imagine__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><circle cx="20" cy="13" r="7" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><path d="M8 35c0-7 5-11 12-11s12 4 12 11" stroke="#6B2E2A" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
-          </div>
-          <p data-i18n="imagine_s1">A doctor follows up on medication.</p>
-        </div>
-        <div class="imagine__story fade-in">
-          <div class="imagine__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><rect x="8" y="18" width="24" height="16" rx="2" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><path d="M14 18v-4a6 6 0 0112 0v4" stroke="#6B2E2A" stroke-width="1.8" fill="none"/></svg>
-          </div>
-          <p data-i18n="imagine_s2">A Spitex nurse coordinates transport.</p>
-        </div>
-        <div class="imagine__story fade-in">
-          <div class="imagine__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><circle cx="14" cy="13" r="6" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><circle cx="27" cy="13" r="6" stroke="#6B2E2A" stroke-width="1.8" fill="none"/><path d="M4 35c0-6 4-10 10-10m16 10c0-6-4-10-10-10" stroke="#6B2E2A" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
-          </div>
-          <p data-i18n="imagine_s3">A relative clarifies unresolved insurance questions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
        04 · DESIGN PROCESS
   ═══════════════════════════════════════════ -->
-  <section class="process" id="process">
+  <section class="process" id="process" style="position:relative;overflow:hidden;">
+    <div class="section-blob" style="width:500px;height:500px;background:var(--meso);top:-120px;right:-120px;"></div>
+    <div class="section-blob" style="width:280px;height:280px;background:var(--micro);bottom:-80px;left:-80px;"></div>
     <div class="container">
       <h2 class="section-title fade-in" data-i18n="process_title">Design Process</h2>
       <p class="section-lead fade-in" data-i18n="process_lead">Five phases from first observation to tested intervention. Hover over each phase to explore.</p>
@@ -340,9 +314,15 @@
   <!-- ═══════════════════════════════════════════
        05 · KEY FINDINGS
   ═══════════════════════════════════════════ -->
-  <section class="findings" id="findings">
+  <section class="findings collapsible-section" id="findings" style="position:relative;overflow:hidden;">
+    <div class="section-blob" style="width:400px;height:400px;background:var(--macro);top:-80px;left:-100px;"></div>
+    <div class="section-blob" style="width:250px;height:250px;background:var(--meso);bottom:-60px;right:5%;"></div>
+    <button class="chapter-toggle" aria-expanded="true" data-target="body-findings">
+      <span class="chapter-toggle__title" data-i18n="findings_title">Key Findings</span>
+      <svg class="chapter-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="chapter-body open" id="body-findings">
     <div class="container">
-      <h2 class="section-title fade-in" data-i18n="findings_title">Key Findings</h2>
       <div class="findings-grid">
         <div class="finding-card fade-in"><span class="finding-card__n">01</span><p data-i18n="f1">Coordination already happens — but often invisibly, carried by motivated individuals rather than formal structures.</p></div>
         <div class="finding-card fade-in"><span class="finding-card__n">02</span><p data-i18n="f2">It is carried without formal mandate, protected time, or recognition.</p></div>
@@ -354,14 +334,21 @@
         <div class="finding-card fade-in"><span class="finding-card__n">08</span><p data-i18n="f8">Making coordination visible is the first step toward making it shareable.</p></div>
       </div>
     </div>
+    </div><!-- /chapter-body findings -->
   </section>
 
   <!-- ═══════════════════════════════════════════
        03 · SYSTEM CHALLENGE
   ═══════════════════════════════════════════ -->
-  <section class="system-section" id="system">
+  <section class="system-section collapsible-section" id="system" style="position:relative;overflow:hidden;">
+    <div class="section-blob" style="width:450px;height:450px;background:var(--micro);top:-100px;right:-80px;"></div>
+    <div class="section-blob" style="width:220px;height:220px;background:var(--macro);bottom:-50px;left:10%;"></div>
+    <button class="chapter-toggle" aria-expanded="true" data-target="body-system">
+      <span class="chapter-toggle__title" data-i18n="system_title">The System Challenge</span>
+      <svg class="chapter-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="chapter-body open" id="body-system">
     <div class="container">
-      <h2 class="section-title fade-in" data-i18n="system_title">The System Challenge</h2>
       <div class="system-statement fade-in">
         <p class="system-statement__intro">The Swiss healthcare system works.</p>
         <p class="system-statement__emphasis">But often because people coordinate beyond their formal roles.</p>
@@ -397,14 +384,21 @@
         </div>
       </div>
     </div>
+    </div><!-- /chapter-body system -->
   </section>
 
   <!-- ═══════════════════════════════════════════
        06 · ICEBERG
   ═══════════════════════════════════════════ -->
-  <section class="iceberg-section" id="iceberg">
+  <section class="iceberg-section collapsible-section" id="iceberg" style="position:relative;overflow:hidden;">
+    <div class="section-blob" style="width:380px;height:380px;background:var(--meso);top:-90px;left:-90px;"></div>
+    <div class="section-blob" style="width:300px;height:300px;background:var(--micro);bottom:-70px;right:-60px;"></div>
+    <button class="chapter-toggle" aria-expanded="true" data-target="body-iceberg">
+      <span class="chapter-toggle__title" data-i18n="ice_title">The Iceberg of Care Coordination</span>
+      <svg class="chapter-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="chapter-body open" id="body-iceberg">
     <div class="container">
-      <h2 class="section-title fade-in" data-i18n="ice_title">The Iceberg of Care Coordination</h2>
       <p class="section-lead fade-in" data-i18n="ice_lead">Hover over each item to learn more. The surface shows what is formally recognised. Below the waterline lives the work that keeps care together — invisible, unprotected, and unacknowledged.</p>
       <div class="iceberg fade-in" role="img" aria-label="Interactive iceberg diagram of visible and invisible care coordination">
 
@@ -477,12 +471,19 @@
 
       </div>
     </div>
+    </div><!-- /chapter-body iceberg -->
   </section>
 
   <!-- ═══════════════════════════════════════════
        07 · REFRAMING
   ═══════════════════════════════════════════ -->
-  <section class="reframing" id="reframing">
+  <section class="reframing collapsible-section" id="reframing" style="position:relative;overflow:hidden;">
+    <div class="section-blob" style="width:350px;height:350px;background:var(--macro);top:-80px;right:-80px;"></div>
+    <button class="chapter-toggle" aria-expanded="true" data-target="body-reframing">
+      <span class="chapter-toggle__title">Reframing</span>
+      <svg class="chapter-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="chapter-body open" id="body-reframing">
     <div class="container">
       <div class="reframing__split fade-in">
         <div class="reframing__col reframing__col--before">
@@ -500,15 +501,23 @@
         <h2 class="reframing__headline" data-i18n="rf_headline">Coordination is Care.</h2>
       </div>
     </div>
+    </div><!-- /chapter-body reframing -->
   </section>
 
 
   <!-- ═══════════════════════════════════════════
        10 · IMPACT
   ═══════════════════════════════════════════ -->
-  <section class="impact" id="impact">
+  <section class="impact collapsible-section" id="impact" style="position:relative;overflow:hidden;">
+    <div class="section-blob" style="width:420px;height:420px;background:var(--meso);top:-100px;left:-100px;"></div>
+    <div class="section-blob" style="width:260px;height:260px;background:var(--micro);bottom:-60px;right:8%;"></div>
+    <button class="chapter-toggle" aria-expanded="true" data-target="body-impact">
+      <span class="chapter-toggle__title" data-i18n="impact_title">Impact &amp; Strategy</span>
+      <svg class="chapter-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="chapter-body open" id="body-impact">
     <div class="container">
-      <h2 class="section-title fade-in" data-i18n="impact_title">Impact &amp; Strategy</h2>
+      <p class="section-lead fade-in" data-i18n="impact_lead">The project does not claim to solve fragmentation alone. Instead, it creates conditions for care coordination to become more visible, shareable and discussable — working at the level of interactions, communication and handovers.</p>
       <p class="section-lead fade-in" data-i18n="impact_lead">The project does not claim to solve fragmentation alone. Instead, it creates conditions for care coordination to become more visible, shareable and discussable — working at the level of interactions, communication and handovers.</p>
       <div class="impact-grid fade-in">
         <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp1">Shared language for coordination</p></div>
@@ -520,14 +529,21 @@
         <div class="impact-item"><div class="impact-item__icon" aria-hidden="true">◈</div><p data-i18n="imp7">Bridge between everyday practice and system-level transformation</p></div>
       </div>
     </div>
+    </div><!-- /chapter-body impact -->
   </section>
 
   <!-- ═══════════════════════════════════════════
        THE DESIGN RESPONSE
   ═══════════════════════════════════════════ -->
-  <section class="interventions" id="interventions">
+  <section class="interventions collapsible-section" id="interventions" style="position:relative;overflow:hidden;">
+    <div class="section-blob" style="width:500px;height:500px;background:var(--macro);top:-120px;right:-120px;"></div>
+    <div class="section-blob" style="width:300px;height:300px;background:var(--meso);bottom:-80px;left:-60px;"></div>
+    <button class="chapter-toggle" aria-expanded="true" data-target="body-interventions">
+      <span class="chapter-toggle__title">The Design Response</span>
+      <svg class="chapter-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="chapter-body open" id="body-interventions">
     <div class="container">
-      <h2 class="section-title fade-in">The Design Response</h2>
       <p class="section-lead fade-in">Three artefacts that make care coordination visible, structured, and shareable.</p>
 
       <!-- ── ARTEFACT 01 — Advocacy Paper ─────────────── -->
@@ -599,6 +615,7 @@
       </article>
 
     </div>
+    </div><!-- /chapter-body interventions -->
   </section>
 
   <!-- ═══════════════════════════════════════════
