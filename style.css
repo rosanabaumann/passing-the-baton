@@ -238,21 +238,22 @@ ul { list-style: none; }
 .hb {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.22;
+  opacity: 0.38;
   pointer-events: none;
+  filter: blur(8px);
 }
 .hb--1 { width: 600px; height: 600px; background: var(--macro); top: -150px; right: -150px; }
 .hb--2 { width: 400px; height: 400px; background: var(--meso);  bottom: 5%;  left: -100px; }
 .hb--3 { width: 300px; height: 300px; background: var(--micro); top: 35%;   right: 5%; }
 
-/* section decorative blobs */
+/* section decorative blobs — clear circles like in the exhibition print */
 .section-blob {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.55;
+  opacity: 0.45;
   pointer-events: none;
   z-index: 0;
-  filter: blur(60px);
+  filter: blur(12px);
 }
 
 /* ── poster title ── */
