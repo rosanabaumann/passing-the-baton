@@ -735,7 +735,7 @@ ul { list-style: none; }
 
 /* ── PROCESS ────────────────────────────────────────────── */
 .process {
-  padding: var(--space-lg) 0 var(--space-xl) 0;
+  padding: var(--space-lg) 0 6rem 0;
   background: var(--bg-warm);
 }
 .phases { display: flex; flex-direction: column; gap: 0; }
@@ -804,6 +804,23 @@ ul { list-style: none; }
 /* ── FINDINGS ───────────────────────────────────────────── */
 .findings {
   padding: var(--space-xl) 0;
+}
+.findings-overall {
+  background: var(--accent);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+}
+.findings-overall__text {
+  font-family: var(--font-head);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: white;
+  line-height: 1.5;
+}
+.findings-overall__text em {
+  font-style: italic;
+  opacity: 0.9;
 }
 .findings-grid {
   display: grid;
@@ -2052,6 +2069,20 @@ ul { list-style: none; }
 }
 .chapter-body.open {
   max-height: 9000px;
+}
+
+/* ── SYSTEMIC LAYERS DIAGRAM ────────────────────────────── */
+.systemic-layers {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 2px 20px rgba(43,30,27,0.06);
+}
+.systemic-layers__svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* about--visual: full-width exhibition image */
