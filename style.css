@@ -222,9 +222,11 @@ ul { list-style: none; }
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 80px;
+  padding-bottom: 2rem;
   position: relative;
   overflow: hidden;
+  gap: 0;
 }
 
 /* fixed background blobs */
@@ -256,13 +258,20 @@ ul { list-style: none; }
   filter: blur(12px);
 }
 
-/* ── poster title ── */
+/* ── poster title — white card ── */
 .hero__poster {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: var(--space-lg) var(--space-md) 0;
-  width: 100%;
+  padding: var(--space-md) var(--space-lg) var(--space-md);
+  width: calc(100% - 4rem);
+  max-width: 900px;
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.9);
+  box-shadow: 0 4px 32px rgba(43,30,27,0.06);
+  margin: 0 auto;
 }
 .hero__eyebrow {
   font-size: 0.72rem;
