@@ -110,7 +110,8 @@
   "f8": "La aparición de SOMEKO crea una oportunidad para integrar la coordinación del cuidado en las vías de atención existentes, en lugar de añadir otro servicio aislado.",
   "f9": "El sistema sanitario suizo funciona. Pero a menudo porque las personas coordinan más allá de sus roles formales. Cada una contribuye a la misma situación de cuidado, pero trabaja desde una parte diferente del sistema. Este trabajo se llama coordinación invisible del cuidado.",
 
-  "ice_title":        "El Iceberg de la Coordinación Asistencial",
+  "ice_title":        "El Iceberg de la Coordinación del Cuidado",
+  "ice_caption":      "Figura: Visualización del Iceberg de Triangulación (Baumann, mayo de 2026). El iceberg muestra lo que el sistema produce (síntomas), lo que se repite con el tiempo (patrones), lo que impulsa esos patrones (estructuras sistémicas) y las creencias que sostienen el sistema (modelos mentales).",
   "ice_lead":         "Pasa el cursor sobre cada elemento para saber más. La superficie muestra lo que está formalmente reconocido. Bajo la línea de flotación vive el trabajo que mantiene unida la atención — invisible, desprotegido y sin reconocimiento.",
   "ice_above_label":  "Lo que es visible",
   "ice_below_label":  "Lo que permanece invisible",

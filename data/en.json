@@ -109,6 +109,7 @@
   "f9": "The Swiss healthcare system works. But often because people coordinate beyond their formal roles. Each contributes to the same care situation, but still works from a different part of the system. This work is called invisible care coordination.",
 
   "ice_title":        "The Iceberg of Care Coordination",
+  "ice_caption":      "Figure: Triangulation Ice Berg Visualization (Baumann, May 2026). The iceberg maps what the system produces (symptoms), what recurs over time (patterns), what drives those patterns (systemic structures), and what beliefs sustain the system (mental models).",
   "ice_lead":         "Hover over each item to learn more. The surface shows what is formally recognised. Below the waterline lives the work that keeps care together — invisible, unprotected, and unacknowledged.",
   "ice_above_label":  "What is visible",
   "ice_below_label":  "What stays invisible",

@@ -874,6 +874,22 @@ ul { list-style: none; }
 }
 .iceberg { max-width: 800px; margin: 0 auto; }
 
+.iceberg-visual { margin: 0; }
+.iceberg-visual__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(43,30,27,0.08);
+}
+.iceberg-visual__caption {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
 .ice-above {
   background: linear-gradient(to bottom, var(--bg), #EDE5DA);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;

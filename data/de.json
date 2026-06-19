@@ -111,6 +111,7 @@
   "f9": "Das Schweizer Gesundheitssystem funktioniert. Aber oft, weil Menschen über ihre formellen Rollen hinaus koordinieren. Alle tragen zur gleichen Versorgungssituation bei, arbeiten aber aus einem anderen Teil des Systems. Diese Arbeit nennt man unsichtbare Versorgungskoordination.",
 
   "ice_title":        "Der Eisberg der Versorgungskoordination",
+  "ice_caption":      "Abbildung: Triangulations-Eisberg-Visualisierung (Baumann, Mai 2026). Der Eisberg zeigt, was das System produziert (Symptome), was sich im Zeitverlauf wiederholt (Muster), was diese Muster antreibt (systemische Strukturen) und welche Überzeugungen das System aufrechterhalten (mentale Modelle).",
   "ice_lead":         "Fahre mit der Maus über jeden Punkt, um mehr zu erfahren. Die Oberfläche zeigt, was formal anerkannt ist. Unterhalb der Wasserlinie lebt die Arbeit, die Versorgung zusammenhält — unsichtbar, ungeschützt und unbekannt.",
   "ice_above_label":  "Was sichtbar ist",
   "ice_below_label":  "Was unsichtbar bleibt",
