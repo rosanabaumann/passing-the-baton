@@ -7,6 +7,12 @@
 let currentLang = 'en';
 let translations = {};
 
+const ABOUT_IMAGES = {
+  en: 'assets/images/Digital Exhibition Material-3.png',
+  es: 'assets/images/Sobre el Projyecto.png',
+  de: 'assets/images/über das projekt.png',
+};
+
 async function loadTranslations(lang) {
   try {
     const res = await fetch(`data/${lang}.json`);
@@ -15,6 +21,8 @@ async function loadTranslations(lang) {
     applyTranslations();
     document.documentElement.lang = lang;
     currentLang = lang;
+    const img = document.getElementById('about-visual-img');
+    if (img && ABOUT_IMAGES[lang]) img.src = ABOUT_IMAGES[lang];
   } catch {
     // Silently fall back to already-loaded English text if translation missing
     console.info(`Translation for "${lang}" not yet available.`);
